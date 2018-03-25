@@ -35,10 +35,9 @@
     <plugin name="cordova-plugin-network-information" />
     <plugin name="cordova-plugin-splashscreen" />
 
-
-    <plugin spec="https://github.com/hasangad/cordova-plugin-fcm" />
+  <!--  <plugin spec="https://github.com/hasangad/cordova-plugin-fcm" />
     <plugin spec="https://github.com/hasangad/cordova-plugin-fcm-config"/>
-    <!--<plugin name="phonegap-plugin-push">
+    <plugin name="phonegap-plugin-push">
         <variable name="SENDER_ID" value="499005818743" />
         <platform name="android">
   <resource-file src="google-services.json" target="google-services.json" />
