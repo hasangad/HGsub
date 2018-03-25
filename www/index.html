@@ -41,7 +41,7 @@
       <li data-icon="info" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">إسألني سؤالاً</a></li>
     </ul>--></div>
       <!-- /panel - End page menu -->
-      <div role="main" class="ui-content posts"> <input type="text" class="form-control t_id" placeholder="اكتب هنا رقم التذكرة" value=""> </div>
+      <div role="main" class="ui-content posts"> <input type="text" class="form-control t_id" placeholder="اكتب هنا رقم التذكرة" value=""> <button class="btn btn-success">عرض التذكرة</button></div>
       <!-- End of POSTS / UI CONTENT  -->
     </div>
     <!-- End Of main page  -->
@@ -67,7 +67,7 @@
 
     </script>
     <script>
-      $(document).on('keyup', '.t_id', function() {
+      $(document).on('click', '.t_show', function() {
         $t_id = $(".t_id").val();
         //alert($t_id);
         var url = "https://hasangad.com/support/api/?Ticket_id=" + $t_id;
