@@ -9,9 +9,7 @@
     <author email="hasangad.com@gmail.com" href="http://HasanGad.com/blog">
         Gadency Team
     </author>
-
     <preference name="phonegap-version" value="cli-6.5.0" />
-
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
@@ -33,7 +31,7 @@
     <plugin name="cordova-plugin-geolocation" />
     <plugin name="cordova-plugin-globalization" />
     <plugin name="cordova-plugin-network-information" />
-    <!--<plugin name="cordova-plugin-splashscreen" />--/>
+    <!--<plugin name="cordova-plugin-splashscreen" />-->
 
   <!--  <plugin spec="https://github.com/hasangad/cordova-plugin-fcm" />
     <plugin spec="https://github.com/hasangad/cordova-plugin-fcm-config"/>
@@ -84,10 +82,10 @@
     <icon gap:platform="ios" height="167" src="www/res/icon/ios/icon-167.png" width="167" />
     <icon gap:platform="ios" height="512" src="www/res/icon/ios/icon-512.png" width="512" />
     <icon gap:platform="ios" height="1024" src="www/res/icon/ios/icon-1024.png" width="1024" />
-    <icon gap:platform="webos" src="www/res/icon/webos/icon-64.png" />
+    <!--<icon gap:platform="webos" src="www/res/icon/webos/icon-64.png" />
     <icon gap:platform="winphone" src="www/res/icon/windows-phone/icon-48.png" />
     <icon gap:platform="winphone" gap:role="background" src="www/res/icon/windows-phone/icon-173.png" />
-    <!--<gap:splash gap:platform="ios" height="480" src="www/res/screen/ios/screen-iphone-portrait.png" width="320" />
+    <gap:splash gap:platform="ios" height="480" src="www/res/screen/ios/screen-iphone-portrait.png" width="320" />
     <gap:splash gap:platform="ios" height="960" src="www/res/screen/ios/screen-iphone-portrait-2x.png" width="640" />
     <gap:splash gap:platform="ios" height="1136" src="www/res/screen/ios/screen-iphone-portrait-568h-2x.png" width="640" />
     <gap:splash gap:platform="ios" height="1024" src="www/res/screen/ios/screen-ipad-portrait.png" width="768" />
