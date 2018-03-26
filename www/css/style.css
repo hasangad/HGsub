@@ -44,6 +44,19 @@ body {
   margin: 5px auto;
 }
 
+.preloader {
+  display: block;
+  background: #ffffff url(../images/loading.gif) center center no-repeat;
+  background-size: 35% 20%;
+  z-index: 111111;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0.8;
+}
+
 .alert {
   border-radius: 25px;
   overflow: hidden;
