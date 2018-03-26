@@ -41,7 +41,8 @@
       <li data-icon="info" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">إسألني سؤالاً</a></li>
     </ul>--></div>
       <!-- /panel - End page menu -->
-      <div role="main" class="ui-content col-xs-12"> <input type="number" class="form-control t_id" placeholder="اكتب هنا رقم التذكرة" value=""> <button class="col-xs-12 btn btn-success t_show">عرض التذكرة</button>
+      <div role="main" class="ui-content col-xs-12">
+        <form><input type="number" class="form-control t_id" placeholder="اكتب هنا رقم التذكرة" value="" required> <a class="col-xs-12 btn btn-success t_show">عرض التذكرة</a></form>
         <div class="alert alert-danger">هذا التطبيق تجريبي فقط إلى الآن !</div>
         <div class="posts"> </div>
       </div>
@@ -71,18 +72,20 @@
     </script>
     <script>
       $(document).on('click', '.t_show', function() {
-        $(".preloader").fadeIn();
-        $t_id = $(".t_id").val();
-        //alert($t_id);
-        var url = "https://hasangad.com/support/api/?Ticket_id=" + $t_id;
-        //alert(url);
-        $.getJSON(url, function(result) {
-          console.log(result);
-          $.each(result, function(i, post) {
-            $("#main_page .posts").html('<div class="col-xs-12"><h2>' + post.ticket.title + '</h2><span class="btn btn-warning">' + post.ticket.status + '</span><p>' + post.ticket.content + '</p></div>');
-            $(".preloader").fadeOut();
+        if ($(".t_id").val() !== "") {
+          $(".preloader").fadeIn();
+          $t_id = $(".t_id").val();
+          //alert($t_id);
+          var url = "https://hasangad.com/support/api/?Ticket_id=" + $t_id;
+          //alert(url);
+          $.getJSON(url, function(result) {
+            console.log(result);
+            $.each(result, function(i, post) {
+              $("#main_page .posts").html('<div class="col-xs-12"><h2>' + post.ticket.title + '</h2><span class="btn btn-warning">' + post.ticket.status + '</span><p>' + post.ticket.content + '</p></div>');
+              $(".preloader").fadeOut();
+            });
           });
-        });
+        }
       });
       $(document).ready(function() {
         $(".preloader").fadeOut(500);

@@ -48,6 +48,9 @@
           });
         });
         $(document).ready(function() {
+          $('a').click(function() {
+            $(".preloader").fadeIn();
+          });
           $(".preloader").fadeOut(500);
         });
 
