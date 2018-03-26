@@ -3,7 +3,6 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>مدونة حسن جاد التقنية</title>
     <!--<base href="https://hasangad.com/">-->
     <!--<script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
@@ -14,17 +13,18 @@
 <link rel='stylesheet' id='css-style' href="css/fa/css/font-awesome.min.css" type='text/css' media='all' />-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--  CSS  -->
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css" />
+    <!--<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css" />-->
     <link rel='stylesheet' id='bootstrap.min-css' href="bs/scss/bootstrap.css" type='text/css' media='all' />
     <link rel='stylesheet' id='bootstrap.min-css-rtl' href='bs/scss/bootstrap-rtl.min.css' type='text/css' media='all' />
-    <link rel='stylesheet' id='css-style' href='css/scss/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='css-style' href='css/style.css' type='text/css' media='all' />
     <link rel='stylesheet' id='css-style' href="css/fa/css/font-awesome.min.css" type='text/css' media='all' /> </head>
 
   <body>
     <div class="preloader"></div>
     <div data-role="page" id="main_page">
       <!-- Start page header  -->
-      <div data-role="header" data-position="fixed" class="header"><img src="images/logo.png" alt="" title="" width="" height="" class="logo">
+      <div data-role="header" data-position="fixed" class="header"> <img src="images/logo.png" alt="" title="" width="" height="" class="logo">
+        <div class="main_menu"> <a href="index.html" class="active"><i class="fa fa-home"></i><span>الرئيسية</span></a> <a href="about.html"><i class="fa fa-info"></i><span>عن التطبيق</span></a> </div>
         <!--<a data-icon="bars" data-iconpos="notext" data-role="button" href="#menu" class="bars_icon ui-btn-right">القائمة</a>--></div>
       <!-- End page header  -->
       <!-- start page menu  -->
@@ -41,7 +41,10 @@
       <li data-icon="info" ><a href="#main_page" data-transition="slide" data-direction="reverse"  data-iconpos="notext">إسألني سؤالاً</a></li>
     </ul>--></div>
       <!-- /panel - End page menu -->
-      <div role="main" class="ui-content posts"> <input type="text" class="form-control t_id" placeholder="اكتب هنا رقم التذكرة" value=""> <button class="btn btn-success">عرض التذكرة</button></div>
+      <div role="main" class="ui-content col-xs-12"> <input type="text" class="form-control t_id" placeholder="اكتب هنا رقم التذكرة" value=""> <button class="col-xs-12 btn btn-success t_show">عرض التذكرة</button>
+        <div class="alert alert-danger">هذا التطبيق تجريبي فقط إلى الآن !</div>
+        <div class="posts"> </div>
+      </div>
       <!-- End of POSTS / UI CONTENT  -->
     </div>
     <!-- End Of main page  -->
@@ -56,14 +59,14 @@
     <script src="js/jquery.min.js"></script>
     <!--<script type="text/javascript" src="js/index.js"></script> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
-    <!--<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.js"></script> -->
-    <script src="js/jquery.mobile-1.4.5.js"></script>
+    <!--<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.js"></script>
+    <script src="js/jquery.mobile-1.4.5.js"></script>-->
     <script>
       //alert('test');
-      $.mobile.changePage("nextPage.html", {
-        transition: "slide",
-        reverse: true
-      });
+      /*  $.mobile.changePage("nextPage.html", {
+          transition: "slide",
+          reverse: true
+        });*/
 
     </script>
     <script>
