@@ -101,6 +101,7 @@ form a {
 .main_menu a span {
   display: block;
   color: #888888;
+  white-space: nowrap;
 }
 
 .bottom_buttons {
