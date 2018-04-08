@@ -55,6 +55,33 @@ body {}
   opacity: 0.8;
 }
 
+.splash {
+  display: block;
+  background: #ffffff url(../images/splash.jpg) center center no-repeat;
+  background-size: 100% 100%;
+  z-index: 111110;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.skip_to_home {
+  position: absolute;
+  left: 35%;
+  width: 30%;
+  color: #ffffff !important;
+  bottom: 10%;
+  z-index: 99;
+}
+
+.login_form {
+  margin-top: 70px;
+}
+
 .alert {
   border-radius: 25px;
   overflow: hidden;

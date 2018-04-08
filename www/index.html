@@ -12,6 +12,9 @@
   </head>
   <body>
     <div class="preloader"></div>
+    <div class="splash">
+      <a class="skip_to_home btn btn-primary">تخطي</a>
+    </div>
     <div data-role="page" id="main_page">
       <!-- Start page header -->
       <div data-role="header" data-position="fixed" class="header">
@@ -29,30 +32,25 @@
       </div>
       <!-- /panel - End page menu -->
       <div role="main" class="ui-content col-xs-12">
-        <div class="main_menu">
-          <a href="index.html" class="active">
-            <i class="fa fa-home"></i>
-            <span>الرئيسية</span></a>
-          <a class="login_link">
-            <i class="fa fa-lock"></i>
-            <span>تسجيل الدخول</span></a>
-          <a class="search_link">
-            <i class="fa fa-search"></i>
-            <span>الإستعلام برقم التذكرة</span></a>
-          <a href="about.html">
-            <i class="fa fa-info"></i>
-            <span>عن التطبيق</span></a>
-        </div>
-        <form method="get" class="login_form" style="display:none">
+        <form method="get" class="login_form page">
           <input type="text" class="form-control u_name" placeholder="اسم المستخدم" value="" required="required">
           <input type="password" class="form-control u_pass" placeholder="كلمة المرور" value="" required="required">
           <a href="#">نسيت كلمة المرور ؟</a>
-          <button class="btn btn-success  col-xs-12" type="submit">تسجيل الدخول</button>
-          <a href="#">تخطي ، الاستعلام برقم التذكرة فقط .</a>
+          <button class="btn btn-success col-xs-12" type="submit">تسجيل الدخول</button>
+          <a class="search_link">تخطي ، الاستعلام برقم التذكرة فقط .</a>
         </form>
-        <form class="check_ticket_by_number" style="display:none"><input type="number" class="form-control t_id" placeholder="اكتب هنا رقم التذكرة" value="" required="required">
+        <form class="check_ticket_by_number page" style="display:none"><input type="number" class="form-control t_id" placeholder="اكتب هنا رقم التذكرة" value="" required="required">
           <a class="col-xs-12 btn btn-success t_show">عرض التذكرة</a>
         </form>
+        <div role="main" class="col-xs-12 about page" style="display:none">
+          <h1>عن تطبيق دعم عملاء حسن جاد
+          </h1>
+          <p>اسمى : الحسن جاد الله ، أُعرف في مجال حلول مواقع الانترنت بإسم حسن جاد مصمم ومطور مواقع انترنت ( قوالب ووردبريس تحديداً ) 🙂 ، مصري تعلمت العديد من مجالات التصميم وتخصصت في تصميم وتطوير مواقع الإنترنت لا أحب أن أصنف نشاطي على أنني ” شركة رائدة في
+            مجال التصميم – أننا الأفضل – أننا الأكثر إحترافاً – الأعلى مبيعاً – الأكثر شهرة ” صدقاً لا أحب هذه العبارات الرنانة التي لا تعبر عن شخصي بكل بساطة أنا مؤسس موقع HASANGAD.com للتصميم والتطوير ، هو موقع شخصي يقدم خدماته في هدوء ويكفيه رضا عملائه عن
+            الخدمات … انتهى بكل بساطة
+          </p>
+        </div>
+        <!-- End of POSTS / UI CONTENT -->
         <div class="alert alert-danger">هذا التطبيق تجريبي فقط إلى الآن !</div>
         <div class="posts"></div>
       </div>
@@ -67,6 +65,20 @@
     <!-- End of app body -->
     <!-- JavaScript -->
     <!--<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script> -->
+    <div class="main_menu bottom_buttons">
+      <a href="index.html" class="active">
+        <i class="fa fa-home"></i>
+        <span>الرئيسية</span></a>
+      <a class="login_link">
+        <i class="fa fa-lock"></i>
+        <span>تسجيل الدخول</span></a>
+      <a class="search_link">
+        <i class="fa fa-search"></i>
+        <span>الإستعلام برقم التذكرة</span></a>
+      <a class="show_about">
+        <i class="fa fa-info"></i>
+        <span>عن التطبيق</span></a>
+    </div>
     <script src="js/jquery.min.js"></script>
     <!--<script type="text/javascript" src="js/index.js"></script> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
@@ -96,13 +108,23 @@
         }
       });
       $(document).ready(function () {
+        $(".skip_to_home").click(function () {
+          $(".splash").animate({"right": "-100%"});
+        });
         $(".login_link").click(function () {
           $(".login_form").stop().slideToggle();
           $(".check_ticket_by_number").slideUp();
+          $(".about").slideUp();
         });
         $(".search_link").click(function () {
           $(".login_form").slideUp();
+          $(".about").slideUp();
           $(".check_ticket_by_number").stop().slideToggle();
+        });
+        $(".show_about").click(function () {
+          $(".about").stop().slideToggle();
+          $(".check_ticket_by_number").slideUp();
+          $(".login_form").slideUp();
         });
         $(".preloader").fadeOut(500);
       });
