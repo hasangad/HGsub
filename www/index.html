@@ -98,12 +98,19 @@
           //alert($t_id);
           var url = "https://hasangad.com/support/api/?Ticket_id=" + $t_id;
           //alert(url);
-          $.getJSON(url, function (result) {
-            console.log(result);
-            $.each(result, function (i, post) {
-              $("#main_page .posts").html('<div class="col-xs-12"><h2>' + post.ticket.title + '</h2><span class="btn btn-warning">' + post.ticket.status + '</span><p>' + post.ticket.content + '</p></div>');
-              $(".preloader").fadeOut();
+          $.getJSON(url, function (tick) {
+            //alert("test");
+            //console.log(result);
+$("#main_page .posts").html();
+$("#main_page .posts").append('<div class="col-xs-12"><h2>' + tick['ticket'].title + '</h2><span class="btn btn-warning">' + tick['ticket'].status + '</span></div>');
+
+            $.each(tick['comment'], function (i, comment) {
+              //alert('inside comments');
+              $("#main_page .posts").append('<div class="col-xs-12 comment"><h2>' + comment.c_date + '</h2><p>' + comment.content + '</p></div>');
             });
+            $("#main_page .posts").append('<div class="col-xs-12"><p>' + tick['ticket'].content + '</p></div>');
+            $(".preloader").fadeOut();
+
           });
         }
       });
