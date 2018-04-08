@@ -35,9 +35,7 @@ p {
   font-size: small
 }
 
-body {
-  background: #fff9f0 !important;
-}
+body {}
 
 .main_menu {
   display: table;
@@ -63,17 +61,30 @@ body {
 }
 
 .main_menu a {
+  display: inline-block;
+  width: 48%;
   font-weight: 400;
   display: inline-block;
-  padding: 5px 10px;
-  border: 1px solid #ffffff;
+  padding: 15px 10px;
+  border: 1px solid #eeeeee;
   border-radius: 4px;
-  margin: 5px 5px 15px 5px;
+  margin: 15px 1%;
+  color: #888888;
+  text-align: center;
+  background: #ffffff;
 }
 
-.main_menu a.active {
-  background: #333333;
+form a {
+  font-weight: 400;
+  color: #666666;
+  display: block;
+  clear: both;
+  padding: 15px 8px;
+  font-size: 14px;
+  text-decoration: underline;
 }
+
+.main_menu a.active {}
 
 .t_id {
   margin: 45px 0
@@ -83,13 +94,33 @@ body {
   display: table;
   font-size: 2em;
   font-weight: 400;
-  color: #ffffff;
+  color: #888888;
   margin: 5px auto;
 }
 
 .main_menu a span {
   display: block;
-  color: #ffffff;
+  color: #888888;
+}
+
+.bottom_buttons {
+  opacity: 0.97;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0
+}
+
+.bottom_buttons a {
+  float: right;
+  width: 25%;
+  margin: 0;
+  border-radius: 0;
+}
+
+.bottom_buttons a span {
+  display: none
 }
 
 /* RTL JQUERY MOBILE  */
@@ -181,6 +212,8 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
   background-color: #FFBD54 !important;
   /*max-height: 20%;
     overflow: hidden;*/
+  height: 50px;
+  margin-bottom: 50px;
 }
 
 #menu {
@@ -230,7 +263,6 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
 
 .logo {
   max-width: 25%;
-  max-height: 100%;
   display: block;
   margin: 0 auto;
   text-align: center;
@@ -434,7 +466,7 @@ iframe {
 .btn {
   font-size: large;
   font-family: "Droid Arabic Kufi", tahoma;
-  border-radius: 25px
+  border-radius: 3px;
 }
 
 form label {
@@ -446,14 +478,16 @@ form label {
 }
 
 .form-control {
-  border-radius: 25px;
+  border-radius: 0px;
   background: #f7f7f7;
   font-size: medium;
-  /*padding:10px;*/
+  /* padding: 10px; */
   font-family: "Droid Arabic Kufi", tahoma;
   height: auto;
   margin-bottom: 10px;
   width: 100%;
+  border: none;
+  border-bottom: 3px solid #ffbd54;
 }
 
 iframe {
