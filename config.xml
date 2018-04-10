@@ -118,13 +118,13 @@
     <splash height="1536" platform="ios" src="www/res/screen/ios/screen-ipad-landscape.png" width="2048" />
     <preference name="SplashScreenDelay" value="3000" />-->
 
-    <feature name="InAppBrowser">
+    <!--<feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
     </feature>
 
     <feature name="InAppBrowser">
     <param name="ios-package" value="CDVInAppBrowser" />
-</feature>
+</feature>-->
 
     <access origin="*" />
     <plugin name="cordova-plugin-whitelist" version="1" />

@@ -125,6 +125,10 @@ form a, .login_form a, .check_ticket_by_number a {
   margin: 5px auto;
 }
 
+.main_menu a i:active {
+  color: #FFBD54
+}
+
 .main_menu a span {
   display: block;
   color: #888888;
@@ -173,11 +177,23 @@ form a, .login_form a, .check_ticket_by_number a {
 }
 
 .posts .comment {
-  /*background: #f4f4f4;*/
+  background: #fafff9;
   padding: 14px;
-  /*border-radius: 15px;*/
+  border-radius: 15px;
   margin: 10px 0;
-  border-bottom: 1px solid #f4f4f4;
+  border: 3px solid #79ca65;
+}
+
+.main_ticket {
+  box-shadow: inset #fdf2d5 0px 0px 100px 0px;
+  border: 2px solid;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.main_ticket, .posts .comment, .main_ticket p, .posts .comment p {
+  font-size: 1em;
 }
 
 .posts .comment:nth-child(even) {
@@ -271,14 +287,18 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
 .madad_body {}
 
 .header {
-  /*position:fixed; top:0; right:0; z-index:99; background-color: #ffffff; opacity: 0.9;
-	width: 100%;*/
   background-color: #FFBD54 !important;
-  /*max-height: 20%;
-    overflow: hidden;*/
   height: 50px;
   margin-bottom: 50px;
-  z-index: 99999
+  z-index: 99999;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+#main_page {
+  padding-top: 14vh;
 }
 
 #menu {

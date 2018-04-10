@@ -68,6 +68,26 @@
           </div>
         </div>
         <!-- End of favs -->
+        <!-- start of loggedin user -->
+        <div class="logged_in container-fluid" style="display:none">
+          <div class="tickets">
+            <div class="table-responsive">
+              <table class="authors_table table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <!--<th>رقم التذكرة</th>-->
+                    <th>اسم التذكرة</th>
+                    <th>حالة التذكرة
+                    </th>
+                    <!--<th>درجة الأهمية</th> <th>تاريخ الإنشاء </th> <th>قسم</th>-->
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- End of loggedin user -->
         <div class="posts"></div>
       </div>
       <!-- End of POSTS / UI CONTENT -->
@@ -75,24 +95,6 @@
     <!-- End Of main page -->
     <div class="app_body container-fluid">
       <!-- <div class="hr"></div> -->
-      <!-- start of loggedin user -->
-      <div class="logged_in container-fluid" style="display:none">
-        <div class="tickets">
-          <div class="table-responsive">
-            <table class="authors_table table table-bordered table-striped">
-              <thead>
-                <tr>
-                  <!--<th>رقم التذكرة</th>-->
-                  <th>اسم التذكرة</th>
-                  <!--<th>درجة الأهمية</th> <th>حالة التذكرة </th> <th>تاريخ الإنشاء </th> <th>قسم</th>-->
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-      <!-- End of loggedin user -->
       <div class="posts container-fluid"></div>
       <!-- End of about -->
     </div>
@@ -177,7 +179,7 @@
         }
       });
       $(document).ready(function () {
-        $(".skip_to_home").fadeIn(500);
+        $(".skip_to_home").fadeIn(1000);
         // Check of user logged in before and stored by webstorage
         $storedName = localStorage.getItem('login_is');
         $storedPw = localStorage.getItem('pass_is');
@@ -195,7 +197,7 @@
           var url_user_tickets = "https://hasangad.com/support/api/?" + dataString;
           $.getJSON(url_user_tickets, function (u_ticks) {
             $.each(u_ticks, function (i, tr) {
-              //alert('inside comments');
+              //alert('inside comments'); $(".logged_in table tbody").append('<tr><td><a datalink="" onclick="notify(' + tr.td_id + ')">' + tr.name + '</a></td></tr>');
               $(".logged_in table tbody").append(tr.tr);
             });
             //  $("#main_page .posts").append('<div class="col-xs-12"><h2>' + tick['ticket'].title + '</h2><span class="btn btn-warning">' + tick['ticket'].status + '</span></div>');
@@ -276,6 +278,10 @@
           return false;*/
         });
         ///////////////////////////////////////
+        $(".main_menu a i").click(function () {
+          $(".main_menu a i").css({"color": "#888888"});
+          $(this).css({"color": "#FFBD54"});
+        });
         $(".skip_to_home").click(function () {
           $(".splash").animate({"right": "-100%"});
         });
@@ -318,9 +324,12 @@
                 //alert(fav);
                 var url = "https://hasangad.com/support/api/?Ticket_id=" + fav;
                 //alert(url);
+                $(".favs table tbody").html("");
                 $.getJSON(url, function (tick) {
-                  //alert("test"); console.log(result);
-                  $(".favs table tbody").append('<tr><td><a href="' + tick['ticket'].link + '" target="_blank">' + tick['ticket'].title + '</a></td><td><span class = "btn btn-warning" > ' + tick['ticket'].status + '</span></td></tr> ');
+                  //alert("test"); console.log(result); $u_fake_id = $storedID * 2; alert($u_fake_id);  alert(fav); $fav_is = fav;
+                  $(".favs table tbody").append(
+                    '<tr><td><a href="#" data-link="' + fav + '" class="ticket_link" onclick="notify(' + fav + ')">' + tick['ticket'].title + '</a></td><td><span class = "btn btn-warning" > ' + tick['ticket'].status + '</span></td></tr> '
+                  );
                 });
               });
             }
@@ -328,38 +337,41 @@
         });
         $(".preloader").fadeOut(500);
       });
+      // https://stackoverflow.com/questions/6466135/adding-extra-zeros-in-front-of-a-number-using-jquery
+      function pad(str, max) {
+        str = str.toString();
+        return str.length < max
+          ? pad("0" + str, max)
+          : str;
+      }
+      function notify(T_id_is) {
+        //console.log(T_id_is); debugger; alert("clicked"); $(".ticket_link").on("click", notify); alert('test'); alert(T_id_is);
+        $fav_is = pad(T_id_is, 7);
+        //alert($fav_is);
+        if ($fav_is !== "") {
+          $(".preloader").fadeIn();
+          $t_id = $fav_is;
+          var url = "https://hasangad.com/support/api/?Ticket_id=" + $t_id;
+          $.getJSON(url, function (tick) {
+            $("#main_page .posts").html("");
+            $("#main_page .posts").append('<div class="col-xs-12"><h2>' + tick['ticket'].title + '</h2><span class="btn btn-warning">' + tick['ticket'].status + '</span></div>');
+            $.each(tick['comment'], function (i, comment) {
+              $("#main_page .posts").append('<div class="col-xs-12 comment"><h2>' + comment.c_date + '</h2><p>' + comment.content + '</p></div>');
+            });
+            $("#main_page .posts").append('<div class="col-xs-12 main_ticket"><p>' + tick['ticket'].content + '</p></div>');
+            $(".preloader").fadeOut();
+          });
+        }
+      }
+      $(document).on('click', '#ticket_link', function () {
+        $t_id_from_link_data = $(this).data('link');
+        notify($t_id_from_link_data);
+      });
     </script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
       app.initialize();
-    </script>
-    <script type="text/javascript" charset="utf-8">
-      // Wait for device API libraries to load
-      //
-      document.addEventListener("deviceready", onDeviceReady, false);
-      // Global InAppBrowser reference
-      var iabRef = null;
-      // Inject our custom JavaScript into the InAppBrowser window
-      //
-      function replaceHeaderImage() {
-        iabRef.executeScript({
-          code: "var img=document.querySelector('#header img'); img.src='http://cordova.apache.org/images/cordova_bot.png';"
-        }, function () {
-          alert("Image Element Successfully Hijacked");
-        }
-      }
-      function iabClose(event) {
-        iabRef.removeEventListener('loadstop', replaceHeaderImage);
-        iabRef.removeEventListener('exit', iabClose);
-      }
-      // device APIs are available
-      //
-      function onDeviceReady() {
-        iabRef = window.open('http://apache.org', '_blank', 'location=yes');
-        iabRef.addEventListener('loadstop', replaceHeaderImage);
-        iabRef.addEventListener('exit', iabClose);
-      }
     </script>
   </body>
 </html>
