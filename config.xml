@@ -21,8 +21,8 @@
     <preference name="ios-statusbarstyle" value="black-opaque" />
     <preference name="detect-data-types" value="true" />
     <preference name="exit-on-suspend" value="false" />
-    <preference name="show-splash-screen-spinner" value="true" />
-    <preference name="auto-hide-splash-screen" value="true" />
+    <!--<preference name="show-splash-screen-spinner" value="true" />
+    <preference name="auto-hide-splash-screen" value="true" />-->
     <preference name="disable-cursor" value="false" />
     <preference name="android-installLocation" value="auto" />
     <preference name="StatusBarOverlaysWebView" value="true" />
@@ -32,7 +32,7 @@
     <plugin name="cordova-plugin-geolocation" />
     <plugin name="cordova-plugin-globalization" />
     <plugin name="cordova-plugin-network-information" />
-    <plugin name="cordova-plugin-splashscreen" />
+  <!--  <plugin name="cordova-plugin-splashscreen" />-->
 
   <!--  <plugin spec="https://github.com/hasangad/cordova-plugin-fcm" />
     <plugin spec="https://github.com/hasangad/cordova-plugin-fcm-config"/>
@@ -86,11 +86,11 @@
     <icon gap:platform="webos" src="www/res/icon/webos/icon-64.png" />
     <icon gap:platform="winphone" src="www/res/icon/windows-phone/icon-48.png" />
     <icon gap:platform="winphone" gap:role="background" src="www/res/icon/windows-phone/icon-173.png" />
-    <gap:splash gap:platform="ios" height="480" src="www/res/screen/ios/screen-iphone-portrait.png" width="320" />
+    <!--<gap:splash gap:platform="ios" height="480" src="www/res/screen/ios/screen-iphone-portrait.png" width="320" />
     <gap:splash gap:platform="ios" height="960" src="www/res/screen/ios/screen-iphone-portrait-2x.png" width="640" />
     <gap:splash gap:platform="ios" height="1136" src="www/res/screen/ios/screen-iphone-portrait-568h-2x.png" width="640" />
     <gap:splash gap:platform="ios" height="1024" src="www/res/screen/ios/screen-ipad-portrait.png" width="768" />
-    <gap:splash gap:platform="ios" height="768" src="www/res/screen/ios/screen-ipad-landscape.png" width="1024" />
+    <gap:splash gap:platform="ios" height="768" src="www/res/screen/ios/screen-ipad-landscape.png" width="1024" />-->
     <gap:config-file parent="CFBundleShortVersionString" platform="ios">
         <string>100</string>
     </gap:config-file>
@@ -102,7 +102,7 @@
     <splash platform="android" qualifier="fr-xhdpi" src="www/images/splash.jpg" />
     <splash platform="android" qualifier="port-xxhdpi" src="www/images/splash.jpg" />
     <splash platform="android" qualifier="land-xxhdpi" src="www/images/splash.jpg" />
-    <splash height="480" platform="ios" src="www/res/screen/ios/screen-iphone-portrait.png" width="320" />
+  <!--  <splash height="480" platform="ios" src="www/res/screen/ios/screen-iphone-portrait.png" width="320" />
     <splash height="960" platform="ios" src="www/res/screen/ios/screen-iphone-portrait-2x.png" width="640" />
     <splash height="1136" platform="ios" src="www/res/screen/ios/screen-iphone-portrait-568h-2x.png" width="640" />
     <splash height="1024" platform="ios" src="www/res/screen/ios/screen-ipad-portrait.png" width="768" />
@@ -116,7 +116,7 @@
     <splash height="1242" platform="ios" src="www/res/screen/ios/screen-ipad-landscape.png" width="2208" />
     <splash height="640" platform="ios" src="www/res/screen/ios/screen-ipad-landscape.png" width="1136" />
     <splash height="1536" platform="ios" src="www/res/screen/ios/screen-ipad-landscape.png" width="2048" />
-    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="SplashScreenDelay" value="3000" />-->
     <access origin="*" />
     <plugin name="cordova-plugin-whitelist" version="1" />
     <allow-intent href="http://*/*" />
