@@ -165,12 +165,12 @@
             /*... var storedNames = JSON.parse(localStorage.getItem("checked_tickets")); */
             /*localStorage.checked_tickets = "";*/
             $CheckExistsFavs = favs.indexOf($t_id);
-            alert($CheckExistsFavs);
+            //alert($CheckExistsFavs);
             if ($CheckExistsFavs == -1) {
               favs.push($t_id);
               // Saving
               localStorage.setItem("favs", JSON.stringify(favs));
-              alert(localStorage.getItem("favs"));
+              //alert(localStorage.getItem("favs"));
             }
             $(".preloader").fadeOut();
           });
