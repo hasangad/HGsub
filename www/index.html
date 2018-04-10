@@ -130,17 +130,19 @@
     <script>
       //$get_favs_array = localStorage.removeItem("favs");
       $get_favs_array = localStorage.getItem("favs");
-      if ($get_favs_array !== "") {
+      if ($get_favs_array !== "" || $get_favs_array !== null) {
         $new_favs = $.parseJSON($get_favs_array);
-        $.each($new_favs, function (i, fav) {
-          //alert(fav);
-          var url = "https://hasangad.com/support/api/?Ticket_id=" + fav;
-          //alert(url);
-          $.getJSON(url, function (tick) {
-            //alert("test"); console.log(result);
-            $(".favs table tbody").append('<tr><td><a href="' + tick['ticket'].link + '">' + tick['ticket'].title + '</a></td><td><span class = "btn btn-warning" > ' + tick['ticket'].status + '</span></td></tr> ');
+        if ($new_favs !== null) {
+          $.each($new_favs, function (i, fav) {
+            //alert(fav);
+            var url = "https://hasangad.com/support/api/?Ticket_id=" + fav;
+            //alert(url);
+            $.getJSON(url, function (tick) {
+              //alert("test"); console.log(result);
+              $(".favs table tbody").append('<tr><td><a href="' + tick['ticket'].link + '">' + tick['ticket'].title + '</a></td><td><span class = "btn btn-warning" > ' + tick['ticket'].status + '</span></td></tr> ');
+            });
           });
-        });
+        }
       }
       $(document).on('click', '.t_show', function () {
         if ($(".t_id").val() !== "") {
