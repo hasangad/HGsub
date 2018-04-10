@@ -101,7 +101,7 @@ body {}
   background: #ffffff;
 }
 
-form a {
+form a, .login_form a, .check_ticket_by_number a {
   font-weight: 400;
   color: #666666;
   display: block;
@@ -142,7 +142,7 @@ form a {
 
 .bottom_buttons a {
   float: right;
-  width: 25%;
+  width: 20%;
   margin: 0;
   border-radius: 0;
 }
@@ -166,6 +166,37 @@ form a {
 .ui-btn-icon-left:after, .ui-btn-icon-right:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after, .ui-btn-icon-notext:after {
   width: 48px;
   height: 48px;
+}
+
+.posts h2 {
+  line-height: 200%
+}
+
+.posts .comment {
+  /*background: #f4f4f4;*/
+  padding: 14px;
+  /*border-radius: 15px;*/
+  margin: 10px 0;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.posts .comment:nth-child(even) {
+  /*background: #f9f9f9;*/
+}
+
+#logout {
+  position: absolute;
+  left: 10px;
+  top: 6px;
+  border-radius: 100%;
+  border: 0;
+  padding: 4px 8px;
+  background: red;
+}
+
+#logout i {
+  color: #ffffff;
+  font-size: 1.8em;
 }
 
 .ui-page-theme-a .ui-btn {
@@ -213,7 +244,7 @@ form a {
 /*---End of rtl jquery mobile ---*/
 
 table, th, td {
-  border: 1px solid black;
+  border: 1px solid #cccccc !important;
 }
 
 body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {}
@@ -232,6 +263,11 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
   font-size: 1.5em;
 }
 
+.h2 {
+  font-size: 1.5em;
+  margin: 25px 0 !important;
+}
+
 .madad_body {}
 
 .header {
@@ -242,6 +278,7 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
     overflow: hidden;*/
   height: 50px;
   margin-bottom: 50px;
+  z-index: 99999
 }
 
 #menu {
