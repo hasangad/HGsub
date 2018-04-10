@@ -320,9 +320,7 @@
                 //alert(url);
                 $.getJSON(url, function (tick) {
                   //alert("test"); console.log(result);
-                  $(".favs table tbody").append(
-                    '<tr><td><a href="#" onclick="window.open("' + tick['ticket'].link + '", "_system");">' + tick['ticket'].title + '</a></td><td><span class = "btn btn-warning" > ' + tick['ticket'].status + '</span></td></tr> '
-                  );
+                  $(".favs table tbody").append('<tr><td><a href="' + tick['ticket'].link + '" target="_blank">' + tick['ticket'].title + '</a></td><td><span class = "btn btn-warning" > ' + tick['ticket'].status + '</span></td></tr> ');
                 });
               });
             }

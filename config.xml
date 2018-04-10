@@ -14,7 +14,7 @@
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />
-<preference name="BackgroundColor" value="ffffff"/>
+<preference name="BackgroundColor" value="0xffffff"/>
     <preference name="webviewbounce" value="true" />
     <preference name="prerendered-icon" value="true" />
     <preference name="stay-in-webview" value="false" />
@@ -117,6 +117,15 @@
     <splash height="640" platform="ios" src="www/res/screen/ios/screen-ipad-landscape.png" width="1136" />
     <splash height="1536" platform="ios" src="www/res/screen/ios/screen-ipad-landscape.png" width="2048" />
     <preference name="SplashScreenDelay" value="3000" />-->
+
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
+
+    <feature name="InAppBrowser">
+    <param name="ios-package" value="CDVInAppBrowser" />
+</feature>
+
     <access origin="*" />
     <plugin name="cordova-plugin-whitelist" version="1" />
     <allow-intent href="http://*/*" />
