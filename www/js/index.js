@@ -47,7 +47,7 @@ var app = {
 			states[Connection.CELL] = 'Cell generic connection';
 			states[Connection.NONE] = 'No network connection';
 			//alert('Connection type: ' + states[networkState]);
-			if (states[Connection.NONE]) {
+			if (states[networkState] == states[Connection.NONE]) {
 				//alert("أنت غير متصل بالانترنت !");
 				$(".check_interent")
 					.fadeIn(1000);
