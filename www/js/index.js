@@ -46,7 +46,10 @@ var app = {
 			states[Connection.CELL_4G] = 'Cell 4G connection';
 			states[Connection.CELL] = 'Cell generic connection';
 			states[Connection.NONE] = 'No network connection';
-			alert('Connection type: ' + states[networkState]);
+			//alert('Connection type: ' + states[networkState]);
+			if (states[Connection.NONE]) {
+				alert("أنت غير متصل بالانترنت !");
+			}
 		}
 		checkConnection();
 		console.log('Received Device Ready Event');
