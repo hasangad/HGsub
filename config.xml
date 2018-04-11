@@ -10,7 +10,7 @@
         Gadency Team
     </author>
     <preference name="StatusBarOverlaysWebView" value="true" />
-    <preference name="StatusBarBackgroundColor" value="#FFBD54 " />
+    <preference name="StatusBarBackgroundColor" value="#25518984" />
     <preference name="StatusBarStyle" value="lightcontent" />
 
     <preference name="phonegap-version" value="cli-6.5.0" />
