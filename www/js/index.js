@@ -48,7 +48,12 @@ var app = {
 			states[Connection.NONE] = 'No network connection';
 			//alert('Connection type: ' + states[networkState]);
 			if (states[Connection.NONE]) {
-				alert("أنت غير متصل بالانترنت !");
+				//alert("أنت غير متصل بالانترنت !");
+				$(".check_interent")
+					.fadeIn(1000);
+			} else {
+				$(".skip_to_home")
+					.fadeIn(1000);
 			}
 		}
 		checkConnection();

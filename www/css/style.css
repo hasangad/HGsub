@@ -69,7 +69,7 @@ body {}
   opacity: 1;
 }
 
-.skip_to_home {
+.skip_to_home, .check_interent {
   position: absolute;
   left: 35%;
   width: 30%;
