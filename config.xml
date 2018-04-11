@@ -35,7 +35,7 @@
     <!--<preference name="ios-statusbarstyle" value="black-opaque" />-->
 
     <preference name="StatusBarOverlaysWebView" value="false" />
-    <preference name="StatusBarBackgroundColor" value="#000000" />
+    <preference name="StatusBarBackgroundColor" value="#ffbb55" />
     <preference name="StatusBarStyle" value="lightcontent" />
 
   <!--  <plugin name="cordova-plugin-splashscreen" />-->
