@@ -9,12 +9,6 @@
     <author email="hasangad.com@gmail.com" href="http://HasanGad.com/blog">
         Gadency Team
     </author>
-    <!--<preference name="ios-statusbarstyle" value="black-opaque" />-->
-
-    <preference name="StatusBarOverlaysWebView" value="true" />
-    <preference name="StatusBarBackgroundColor" value="#25518984" />
-    <preference name="StatusBarStyle" value="lightcontent" />
-
     <preference name="phonegap-version" value="cli-6.5.0" />
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
@@ -36,6 +30,14 @@
     <plugin name="cordova-plugin-geolocation" />
     <plugin name="cordova-plugin-globalization" />
     <plugin name="cordova-plugin-network-information" />
+
+    <plugin name="cordova-plugin-statusbar" />
+    <!--<preference name="ios-statusbarstyle" value="black-opaque" />-->
+
+    <preference name="StatusBarOverlaysWebView" value="true" />
+    <preference name="StatusBarBackgroundColor" value="#25518984" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+
   <!--  <plugin name="cordova-plugin-splashscreen" />-->
 
   <!--  <plugin spec="https://github.com/hasangad/cordova-plugin-fcm" />
