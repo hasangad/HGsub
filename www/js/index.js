@@ -52,6 +52,7 @@ var app = {
 				$(".check_interent")
 					.fadeIn(1000);
 			} else {
+				alert("Connected");
 				$(".skip_to_home")
 					.fadeIn(1000);
 			}
