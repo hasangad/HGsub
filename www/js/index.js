@@ -116,7 +116,7 @@ var app = {
 			}
 		});
 	},
-	setupPush: function() {
+	/*setupPush: function() {
 		console.log('calling push init');
 		var push = PushNotification.init({
 			"android": {
@@ -159,4 +159,4 @@ var app = {
 		});
 	}
 };
-//app.setupPush();
+app.setupPush();*/
