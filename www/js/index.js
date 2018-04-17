@@ -96,17 +96,17 @@ var app = {
 		// SOURCE 2 :: https://github.com/hasangad/cordova-plugin-fcm
 		//FCMPlugin.onTokenRefresh( onTokenRefreshCallback(token) );
 		//Note that this callback will be fired everytime a new token is generated, including the first time.
-		/*FCMPlugin.onTokenRefresh(function(token){
+		FCMPlugin.onTokenRefresh(function(token){
 		    alert( token );
 		});
        //FCMPlugin.getToken( successCallback(token), errorCallback(err) );
 		//Keep in mind the function will return null if the token has not been established yet.
 		FCMPlugin.getToken(function(token){
 		    alert(token);
-		});*/
+		});
 		//FCMPlugin.onNotification( onNotificationCallback(data), successCallback(msg), errorCallback(err) )
 		//Here you define your application behaviour based on the notification data.
-	/*	FCMPlugin.onNotification(function(data) {
+		FCMPlugin.onNotification(function(data) {
 			if (data.wasTapped) {
 				//Notification was received on device tray and tapped by the user.
 				alert(JSON.stringify(data));
@@ -115,7 +115,7 @@ var app = {
 				alert(JSON.stringify(data));
 			}
 		});
-	},*/
+	},
 	setupPush: function() {
 		console.log('calling push init');
 		var push = PushNotification.init({
