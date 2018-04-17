@@ -58,8 +58,8 @@ var app = {
 			}
 		}
 		checkConnection();
-		console.log('Received Device Ready Event');
-		console.log('calling setup push');
+		//console.log('Received Device Ready Event');
+		//console.log('calling setup push');
 		/*---------------------------------------------------------*/
 		/* window.FirebasePlugin.getToken(function(token) {
   alert(token);
@@ -96,14 +96,14 @@ var app = {
 		// SOURCE 2 :: https://github.com/hasangad/cordova-plugin-fcm
 		//FCMPlugin.onTokenRefresh( onTokenRefreshCallback(token) );
 		//Note that this callback will be fired everytime a new token is generated, including the first time.
-		/*FCMPlugin.onTokenRefresh(function(token){
+		FCMPlugin.onTokenRefresh(function(token){
 		    alert( token );
 		});
        //FCMPlugin.getToken( successCallback(token), errorCallback(err) );
 		//Keep in mind the function will return null if the token has not been established yet.
 		FCMPlugin.getToken(function(token){
 		    alert(token);
-		});*/
+		});
 		//FCMPlugin.onNotification( onNotificationCallback(data), successCallback(msg), errorCallback(err) )
 		//Here you define your application behaviour based on the notification data.
 	/*	FCMPlugin.onNotification(function(data) {
@@ -114,11 +114,8 @@ var app = {
 				//Notification was received in foreground. Maybe the user needs to be notified.
 				alert(JSON.stringify(data));
 			}
-		});
-	},*/
-	FCMPlugin.getToken(function(token){
-			alert(token);
-	});
+		});*/
+	},
 	setupPush: function() {
 		console.log('calling push init');
 		var push = PushNotification.init({
@@ -153,7 +150,7 @@ var app = {
 			console.log("push error = " + e.message);
 		});
 		push.on('notification', function(data) {
-			console.log('notification event');
+			//console.log('notification event');
 			navigator.notification.alert(data.message, // message
 				null, // callback
 				data.title, // title
