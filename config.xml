@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.HasanGadSupportV2" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.HasanGadSupportV2" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>
 حسن جاد | دعم العملاء
 </name>
@@ -11,7 +11,8 @@
     </author>
     <preference name="phonegap-version" value="cli-6.5.0" />
     <preference name="permissions" value="none" />
-    <preference name="orientation" value="default" />
+    <preference name="orientation" value="portrait" />
+    <preference name="DisallowOverscroll" value="true"/>
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />
     <preference name="BackgroundColor" value="#000000"/>
@@ -25,10 +26,10 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-installLocation" value="auto" />
     <plugin name="cordova-plugin-device" />
-    <plugin name="cordova-plugin-device-motion" />
-    <plugin name="cordova-plugin-device-orientation" />
-    <plugin name="cordova-plugin-geolocation" />
-    <plugin name="cordova-plugin-globalization" />
+    <!--<plugin name="cordova-plugin-device-motion" />-->
+    <!--<plugin name="cordova-plugin-device-orientation" />-->
+    <!--<plugin name="cordova-plugin-geolocation" />
+    <plugin name="cordova-plugin-globalization" />-->
     <plugin name="cordova-plugin-network-information" />
 <!-- Source :: https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-statusbar/ -->
     <plugin name="cordova-plugin-statusbar" />
@@ -39,7 +40,8 @@
 
   <!--  <plugin name="cordova-plugin-splashscreen" />-->
 
-  <!--  <plugin spec="https://github.com/hasangad/cordova-plugin-fcm" />
+
+   <plugin spec="https://github.com/hasangad/cordova-plugin-fcm" />
     <plugin spec="https://github.com/hasangad/cordova-plugin-fcm-config"/>
     <plugin name="phonegap-plugin-push">
         <variable name="SENDER_ID" value="499005818743" />
@@ -49,7 +51,7 @@
 <platform name="ios">
   <resource-file src="GoogleService-Info.plist" />
 </platform>
-</plugin>-->
+</plugin>
 
 
         <!--<plugin name="cordova-plugin-firebase" spec="~0.1.24" />-->
@@ -61,7 +63,7 @@
     <!--<plugin spec="https://myUser:MyPassword@bitbucket.org/prospectum/cordova-plugin-fcm-config.gitMyPassword@bitbucket.org/prospectum/cordova-plugin-fcm-config.git" source="git" />-->
     <!--<plugin name="cordova-plugin-firebase" spec="~0.1.19"/>-->
 <!--<resource-file src="GoogleService-Info.plist" target="GoogleService-Info.plist" />-->
-    <plugin name="cordova-plugin-vibration" />
+    <!--<plugin name="cordova-plugin-vibration" />-->
     <!--<plugin name="cordova-plugin-hidden-statusbar-overlay" />-->
     <icon src="icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
