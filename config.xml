@@ -41,8 +41,8 @@
   <!--  <plugin name="cordova-plugin-splashscreen" />-->
 
 
-   <plugin spec="https://github.com/hasangad/cordova-plugin-fcm" />
-    <plugin spec="https://github.com/hasangad/cordova-plugin-fcm-config"/>
+   <plugin spec="https://github.com/HGapps/cordova-plugin-fcm" />
+    <plugin spec="https://github.com/HGapps/cordova-plugin-fcm-config"/>
     <plugin name="phonegap-plugin-push">
         <variable name="SENDER_ID" value="499005818743" />
         <platform name="android">
