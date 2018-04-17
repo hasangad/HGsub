@@ -115,7 +115,7 @@ var app = {
 				alert(JSON.stringify(data));
 			}
 		});*/
-	},
+	}/*,
 	setupPush: function() {
 		console.log('calling push init');
 		var push = PushNotification.init({
@@ -159,4 +159,4 @@ var app = {
 		});
 	}
 };
-app.setupPush();
+app.setupPush();*/
