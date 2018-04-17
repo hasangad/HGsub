@@ -42,14 +42,18 @@
 
 
    <plugin spec="https://github.com/HGapps/cordova-plugin-fcm" />
+   <!--
+   For anyone who's facing a similar problem, the resolution I found is utterly strange but it works, this seems to be some sort of file write problem, and every time I build for iOS on PGB with the fcm-config plugin excluded from config.xml it builds correctly, and then I include the plugin back and re-upload and build again, and it works, and the app is receiving notification tests from FCM Console both in-app and in notification tray perfectly!
+   So every time I need to rebuild the app on PGB, I exclude this plugin and build and then simply re-include this plugin and build and it works!!!
+   -->
     <plugin spec="https://github.com/HGapps/cordova-plugin-fcm-config"/>
     <plugin name="phonegap-plugin-push">
         <variable name="SENDER_ID" value="499005818743" />
+        <platform name="ios">
+          <resource-file src="GoogleService-Info.plist" />
+        </platform>
         <platform name="android">
   <resource-file src="google-services.json" target="google-services.json" />
-</platform>
-<platform name="ios">
-  <resource-file src="GoogleService-Info.plist" />
 </platform>
 </plugin>
 
