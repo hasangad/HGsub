@@ -49,7 +49,9 @@
     <plugin spec="https://github.com/HGapps/cordova-plugin-fcm-config"/>
     <plugin name="phonegap-plugin-push">
         <variable name="SENDER_ID" value="499005818743" />
-    
+      < <platform name="ios">
+          <resource-file src="GoogleService-Info.plist" />
+        </platform>
         <platform name="android">
   <resource-file src="google-services.json" target="google-services.json" />
 </platform>
