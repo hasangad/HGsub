@@ -159,4 +159,4 @@ var app = {
 		});
 	}
 };
-app.setupPush();
+//app.setupPush();
