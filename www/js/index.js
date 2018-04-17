@@ -106,8 +106,7 @@ var app = {
 		});*/
 		//FCMPlugin.onNotification( onNotificationCallback(data), successCallback(msg), errorCallback(err) )
 		//Here you define your application behaviour based on the notification data.
-
-		/*FCMPlugin.onNotification(function(data) {
+		FCMPlugin.onNotification(function(data) {
 			if (data.wasTapped) {
 				//Notification was received on device tray and tapped by the user.
 				alert(JSON.stringify(data));
@@ -116,10 +115,8 @@ var app = {
 				alert(JSON.stringify(data));
 			}
 		});
-	},*/
-
-	
-	/*setupPush: function() {
+	},
+	setupPush: function() {
 		console.log('calling push init');
 		var push = PushNotification.init({
 			"android": {
@@ -162,4 +159,4 @@ var app = {
 		});
 	}
 };
-app.setupPush();*/
+app.setupPush();
