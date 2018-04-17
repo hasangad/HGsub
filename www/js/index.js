@@ -116,6 +116,9 @@ var app = {
 			}
 		});
 	},*/
+	FCMPlugin.getToken(function(token){
+			alert(token);
+	});
 	setupPush: function() {
 		console.log('calling push init');
 		var push = PushNotification.init({
