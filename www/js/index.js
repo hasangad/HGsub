@@ -60,7 +60,6 @@ var app = {
 		checkConnection();
 		console.log('Received Device Ready Event');
 		console.log('calling setup push');
-		//app.setupPush();
 		/*---------------------------------------------------------*/
 		/* window.FirebasePlugin.getToken(function(token) {
   alert(token);
@@ -107,64 +106,57 @@ var app = {
 		});*/
 		//FCMPlugin.onNotification( onNotificationCallback(data), successCallback(msg), errorCallback(err) )
 		//Here you define your application behaviour based on the notification data.
-		/*FCMPlugin.onNotification(function(data){
-		    if(data.wasTapped){
-		      //Notification was received on device tray and tapped by the user.
-		      alert( JSON.stringify(data) );
-		    }else{
-		      //Notification was received in foreground. Maybe the user needs to be notified.
-		      alert( JSON.stringify(data) );
-		    }
-		});*/
+		FCMPlugin.onNotification(function(data) {
+			if (data.wasTapped) {
+				//Notification was received on device tray and tapped by the user.
+				alert(JSON.stringify(data));
+			} else {
+				//Notification was received in foreground. Maybe the user needs to be notified.
+				alert(JSON.stringify(data));
+			}
+		});
 	},
-	/* setupPush: function() {
-	     console.log('calling push init');
-	     var push = PushNotification.init({
-	         "android": {
-	             "senderID": "499005818743",
-	         },
-	         "browser": {},
-	         "ios": {
-	             "sound": true,
-	             "vibration": true,
-	             "badge": true
-	         },
-	         "windows": {}
-	     });
-	     console.log('after init');
-
-	     push.on('registration', function(data) {
-	       navigator.notification.beep(1);
-
-	         console.log('registration event: ' + data.registrationId);
-
-	         var oldRegId = localStorage.getItem('registrationId');
-	         if (oldRegId !== data.registrationId) {
-	             // Save new registration ID
-	             localStorage.setItem('registrationId', data.registrationId);
-	             // Post registrationId to your app server as the value has changed
-	         }
-
-	         var parentElement = document.getElementById('registration');
-	         var listeningElement = parentElement.querySelector('.waiting');
-	         var receivedElement = parentElement.querySelector('.received');
-
-	         listeningElement.setAttribute('style', 'display:none;');
-	         receivedElement.setAttribute('style', 'display:block;');
-	     });
-
-	     push.on('error', function(e) {
-	         console.log("push error = " + e.message);
-	     });
-
-	     push.on('notification', function(data) {
-	         console.log('notification event');
-	         navigator.notification.alert(
-	             data.message,         // message
-	             null,                 // callback
-	             data.title,           // title
-	             'Ok'                  // buttonName
-	         );
-	    });
-	 }*/
+	setupPush: function() {
+		console.log('calling push init');
+		var push = PushNotification.init({
+			"android": {
+				"senderID": "499005818743",
+			},
+			"browser": {},
+			"ios": {
+				"sound": true,
+				"vibration": true,
+				"badge": true
+			},
+			"windows": {}
+		});
+		console.log('after init');
+		push.on('registration', function(data) {
+			navigator.notification.beep(1);
+			console.log('registration event: ' + data.registrationId);
+			var oldRegId = localStorage.getItem('registrationId');
+			if (oldRegId !== data.registrationId) {
+				// Save new registration ID
+				localStorage.setItem('registrationId', data.registrationId);
+				// Post registrationId to your app server as the value has changed
+			}
+			var parentElement = document.getElementById('registration');
+			var listeningElement = parentElement.querySelector('.waiting');
+			var receivedElement = parentElement.querySelector('.received');
+			listeningElement.setAttribute('style', 'display:none;');
+			receivedElement.setAttribute('style', 'display:block;');
+		});
+		push.on('error', function(e) {
+			console.log("push error = " + e.message);
+		});
+		push.on('notification', function(data) {
+			console.log('notification event');
+			navigator.notification.alert(data.message, // message
+				null, // callback
+				data.title, // title
+				'Ok' // buttonName
+			);
+		});
+	}
 };
+app.setupPush();
