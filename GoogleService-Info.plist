@@ -33,6 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<false></false>
 	<string>1:499005818743:ios:0d098d47ce91fe8e</string>
 	<key>DATABASE_URL</key>
 	<string>https://hgb-push-notifications-b3130.firebaseio.com</string>
