@@ -1,4 +1,4 @@
-<!--<?xml version='1.0' encoding='utf-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <widget id="com.HasanGadSupportV2" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>
 حسن جاد | دعم العملاء
@@ -34,7 +34,7 @@
 <!-- Source :: https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-statusbar/ -->
     <plugin name="cordova-plugin-statusbar" />
     <!--<preference name="ios-statusbarstyle" value="black-opaque" />-->
-    <preference name="StatusBarOverl<!--aysWebView" value="false" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#ffbb55" />
     <preference name="StatusBarStyle" value="lightcontent" />
 
@@ -49,7 +49,7 @@
     <plugin spec="https://github.com/HGapps/cordova-plugin-fcm-config"/>
     <plugin name="phonegap-plugin-push">
         <variable name="SENDER_ID" value="499005818743" />
-       <platform name="ios">
+        <platform name="ios">
           <resource-file src="GoogleService-Info.plist" />
         </platform>
         <platform name="android">
