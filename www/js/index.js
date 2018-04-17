@@ -58,35 +58,6 @@ var app = {
 			}
 		}
 		checkConnection();
-		//console.log('Received Device Ready Event');
-		//console.log('calling setup push');
-		/*---------------------------------------------------------*/
-		/* window.FirebasePlugin.getToken(function(token) {
-  alert(token);
-}, function(error){
-  alert('Error!!!');
-});*/
-		/*  window.FirebasePlugin.getToken(function(token) {
-		       alert(token);
-		      // save this server-side and use it to push notifications to this device
-		      console.log(token);
-		  }, function(error) {
-		        alert('Error!!!');
-		      console.error(error);
-		  });
-
-		  window.FirebasePlugin.onTokenRefresh(function(token) {
-		  // save this server-side and use it to push notifications to this device
-		  console.log(token);
-		  }, function(error) {
-		  console.error(error);
-		  });
-
-		  window.FirebasePlugin.onNotificationOpen(function(notification) {
-		  console.log(notification);
-		  }, function(error) {
-		  console.error(error);
-		  });*/
 		//FCMPlugin.subscribeToTopic( topic, successCallback(msg), errorCallback(err) );
 		//All devices are subscribed automatically to 'all' and 'ios' or 'android' topic respectively.
 		//Must match the following regular expression: "[a-zA-Z0-9-_.~%]{1,900}".
@@ -157,6 +128,6 @@ var app = {
 				'Ok' // buttonName
 			);
 		});
-	}
+	}*/
 };
-app.setupPush();*/
+//app.setupPush();
