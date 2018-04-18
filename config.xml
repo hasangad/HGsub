@@ -3,17 +3,15 @@
     <name>
 حسن جاد | دعم العملاء
 </name>
-<!---------------------------------------------
------------------------------------------------
-This App uses TenTv Key On PGB for release
------------------------------------------------
----------------------------------------------->
     <description>
       تطبيق متابعة المشاريع والتذاكر الخاص بموقع حسن جاد دوت كوم
     </description>
     <author email="hasangad.com@gmail.com" href="http://HasanGad.com/blog">
         Gadency Team
     </author>
+    <!---------------------------------------------
+    This App uses TenTv Key On PGB for release
+    ---------------------------------------------->
     <preference name="phonegap-version" value="cli-6.5.0" />
     <preference name="permissions" value="none" />
     <preference name="orientation" value="portrait" />
