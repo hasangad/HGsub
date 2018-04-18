@@ -3,6 +3,11 @@
     <name>
 حسن جاد | دعم العملاء
 </name>
+<!---------------------------------------------
+-----------------------------------------------
+This App uses TenTv Key On PGB for release
+-----------------------------------------------
+---------------------------------------------->
     <description>
       تطبيق متابعة المشاريع والتذاكر الخاص بموقع حسن جاد دوت كوم
     </description>
@@ -47,7 +52,7 @@
   -->
    <plugin spec="https://github.com/HGapps/cordova-plugin-fcm" />
     <plugin spec="https://github.com/HGapps/cordova-plugin-fcm-config"/>
-    <plugin name="phonegap-plugin-push">
+    <!--<plugin name="phonegap-plugin-push">
         <variable name="SENDER_ID" value="499005818743" />
         <platform name="ios">
           <resource-file src="GoogleService-Info.plist" />
@@ -55,7 +60,7 @@
         <platform name="android">
   <resource-file src="google-services.json" target="google-services.json" />
 </platform>
-</plugin>
+</plugin>-->
 
 
         <!--<plugin name="cordova-plugin-firebase" spec="~0.1.24" />-->
@@ -138,7 +143,7 @@
 </feature>-->
 
     <access origin="*" />
-    <plugin name="cordova-plugin-whitelist" version="1" />
+    <!--<plugin name="cordova-plugin-whitelist" version="1" />-->
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
