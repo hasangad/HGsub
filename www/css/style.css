@@ -620,3 +620,10 @@ iframe {
 .map_me i {
   margin-left: 6px;
 }
+
+
+@media  screen and (min-width:750px) {
+
+  .main { zoom:2 }
+
+}
