@@ -300,7 +300,7 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
 
 .header {
   background-color: #FFBD54 !important;
-  height: 50px;
+  height: 10%;
   margin-bottom: 50px;
   z-index: 99999;
   position: fixed;
@@ -361,7 +361,7 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
 .logo {
   max-width: 25%;
   display: block;
-  margin: 0 auto;
+  margin: 10% auto 0 auto;
   text-align: center;
 }
 
