@@ -21,19 +21,11 @@
     <preference name="stay-in-webview" value="false" />
     <preference name="detect-data-types" value="true" />
     <preference name="exit-on-suspend" value="false" />
-    <!--<preference name="show-splash-screen-spinner" value="true" />
-    <preference name="auto-hide-splash-screen" value="true" />-->
     <preference name="disable-cursor" value="false" />
     <preference name="android-installLocation" value="auto" />
     <plugin name="cordova-plugin-device" />
-    <!--<plugin name="cordova-plugin-device-motion" />-->
-    <!--<plugin name="cordova-plugin-device-orientation" />-->
-    <!--<plugin name="cordova-plugin-geolocation" />
-    <plugin name="cordova-plugin-globalization" />-->
     <plugin name="cordova-plugin-network-information" />
-<!-- Source :: https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-statusbar/ -->
     <plugin name="cordova-plugin-statusbar" />
-    <!--<preference name="ios-statusbarstyle" value="black-opaque" />-->
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#ffbb55" />
     <preference name="StatusBarStyle" value="lightcontent" />
@@ -73,8 +65,6 @@
     <icon gap:platform="android" gap:qualifier="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />
     <icon gap:platform="android" gap:qualifier="hdpi" src="www/res/icon/android/icon-72-hdpi.png" />
     <icon gap:platform="android" gap:qualifier="xhdpi" src="www/res/icon/android/icon-96-xhdpi.png" />
-    <icon gap:platform="blackberry" src="www/res/icon/blackberry/icon-80.png" />
-    <icon gap:platform="blackberry" gap:state="hover" src="www/res/icon/blackberry/icon-80.png" />
     <icon gap:platform="ios" height="29" src="www/res/icon/ios/icon-29.png" width="29" />
     <icon gap:platform="ios" height="40" src="www/res/icon/ios/icon-40.png" width="40" />
     <icon gap:platform="ios" height="57" src="www/res/icon/ios/icon-57.png" width="57" />
@@ -93,14 +83,6 @@
     <icon gap:platform="ios" height="167" src="www/res/icon/ios/icon-167.png" width="167" />
     <icon gap:platform="ios" height="512" src="www/res/icon/ios/icon-512.png" width="512" />
     <icon gap:platform="ios" height="1024" src="www/res/icon/ios/icon-1024.png" width="1024" />
-    <icon gap:platform="webos" src="www/res/icon/webos/icon-64.png" />
-    <icon gap:platform="winphone" src="www/res/icon/windows-phone/icon-48.png" />
-    <icon gap:platform="winphone" gap:role="background" src="www/res/icon/windows-phone/icon-173.png" />
-    <!--<gap:splash gap:platform="ios" height="480" src="www/res/screen/ios/screen-iphone-portrait.png" width="320" />
-    <gap:splash gap:platform="ios" height="960" src="www/res/screen/ios/screen-iphone-portrait-2x.png" width="640" />
-    <gap:splash gap:platform="ios" height="1136" src="www/res/screen/ios/screen-iphone-portrait-568h-2x.png" width="640" />
-    <gap:splash gap:platform="ios" height="1024" src="www/res/screen/ios/screen-ipad-portrait.png" width="768" />
-    <gap:splash gap:platform="ios" height="768" src="www/res/screen/ios/screen-ipad-landscape.png" width="1024" />-->
     <gap:config-file parent="CFBundleShortVersionString" platform="ios">
         <string>100</string>
     </gap:config-file>
@@ -130,21 +112,7 @@
     <plugin name="cordova-plugin-splashscreen" />
 
 
-  <!--  <splash height="480" platform="ios" src="www/res/screen/ios/screen-iphone-portrait.png" width="320" />
-    <splash height="960" platform="ios" src="www/res/screen/ios/screen-iphone-portrait-2x.png" width="640" />
-    <splash height="1136" platform="ios" src="www/res/screen/ios/screen-iphone-portrait-568h-2x.png" width="640" />
-    <splash height="1024" platform="ios" src="www/res/screen/ios/screen-ipad-portrait.png" width="768" />
-    <splash height="1334" platform="ios" src="www/res/screen/ios/screen-ipad-portrait.png" width="750" />
-    <splash height="2208" platform="ios" src="www/res/screen/ios/screen-ipad-portrait.png" width="1242" />
-    <splash height="1136" platform="ios" src="www/res/screen/ios/screen-ipad-portrait.png" width="640" />
-    <splash height="2732" platform="ios" src="www/res/screen/ios/screen-ipad-portrait.png" width="2048" />
-    <splash height="2048" platform="ios" src="www/res/screen/ios/screen-ipad-portrait.png" width="1536" />
-    <splash height="768" platform="ios" src="www/res/screen/ios/screen-ipad-landscape.png" width="1024" />
-    <splash height="750" platform="ios" src="www/res/screen/ios/screen-ipad-landscape.png" width="1334" />
-    <splash height="1242" platform="ios" src="www/res/screen/ios/screen-ipad-landscape.png" width="2208" />
-    <splash height="640" platform="ios" src="www/res/screen/ios/screen-ipad-landscape.png" width="1136" />
-    <splash height="1536" platform="ios" src="www/res/screen/ios/screen-ipad-landscape.png" width="2048" />
-    <preference name="SplashScreenDelay" value="3000" />-->
+  <!--<preference name="SplashScreenDelay" value="3000" />-->
 
     <!--<feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
