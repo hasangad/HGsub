@@ -153,7 +153,9 @@ form a, .login_form a, .check_ticket_by_number a {
   bottom: 0;
   left: 0;
   width: 100%;
-  margin: 0
+  margin: 0;
+  margin-bottom: constant(safe-area-inset-bottom); /* iOS 11.0 */
+ margin-bottom: env(safe-area-inset-bottom); /* iOS 11.2 */
 }
 
 .bottom_buttons a {
