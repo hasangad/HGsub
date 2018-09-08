@@ -38,7 +38,6 @@
     <preference name="StatusBarBackgroundColor" value="#ffbb55" />
     <preference name="StatusBarStyle" value="lightcontent" />
 
- <plugin name="cordova-plugin-splashscreen" />
 
 
   <!--
@@ -105,7 +104,7 @@
     <gap:config-file parent="CFBundleShortVersionString" platform="ios">
         <string>100</string>
     </gap:config-file>
-    <splash src="www/images/splash.jpg" />
+    <!--<splash src="www/images/splash.jpg" />-->
     <splash platform="android" qualifier="ldpi" src="www/images/splash.jpg" />
     <splash platform="android" qualifier="mdpi" src="www/images/splash.jpg" />
     <splash platform="android" qualifier="hdpi" src="www/images/splash.jpg" />
@@ -122,6 +121,10 @@
     <splash  platform="ios" src="www/res/screen/ios/Default@3x~iphone~comany.png" />
     <splash  platform="ios" src="www/res/screen/ios/Default@2x~ipad~anyany.png" />
     <splash  platform="ios" src="www/res/screen/ios/Default@2x~ipad~comany.png" />
+
+
+    <plugin name="cordova-plugin-splashscreen" />
+
 
   <!--  <splash height="480" platform="ios" src="www/res/screen/ios/screen-iphone-portrait.png" width="320" />
     <splash height="960" platform="ios" src="www/res/screen/ios/screen-iphone-portrait-2x.png" width="640" />
