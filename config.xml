@@ -14,8 +14,8 @@
       <preference name="StatusBarOverlaysWebView" value="true" />
 
 
-    <preference name="phonegap-version" value="cli-7.1.0" />
-  <!--  <engine name="ios" spec="latest" />-->
+    <preference name="phonegap-version" value="cli-7.0.1" />
+  <engine name="ios" spec="latest" />
 
     <!--<preference name="permissions" value="none" />
     <preference name="orientation" value="portrait" />
