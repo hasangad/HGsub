@@ -4,14 +4,14 @@
         <param name="browser-package" value="Device" />
     </feature>
     <name>
-حسن جاد | دعم العملاء
-</name>
+    حسن جاد | دعم العملاء
+  </name>
     <description>
-      تطبيق متابعة المشاريع والتذاكر الخاص بموقع حسن جاد دوت كوم
-    </description>
+    تطبيق متابعة المشاريع والتذاكر الخاص بموقع حسن جاد دوت كوم
+  </description>
     <author email="hasangad.com@gmail.com" href="http://HasanGad.com/blog">
-        Gadency Team
-    </author>
+    Gadency Team
+  </author>
     <icon src="www/icon.png" />
     <icon gap:platform="android" src="www/icon.png" />
     <icon gap:platform="ios" height="29" src="www/res/icon/ios/icon-29.png" width="29" />
