@@ -10,10 +10,10 @@
         Gadency Team
     </author>
     <icon src="icon.png" />
-    <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
-    <icon gap:platform="android" gap:qualifier="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />
-    <icon gap:platform="android" gap:qualifier="hdpi" src="www/res/icon/android/icon-72-hdpi.png" />
-    <icon gap:platform="android" gap:qualifier="xhdpi" src="www/res/icon/android/icon-96-xhdpi.png" />
+    <icon gap:platform="android" gap:qualifier="ldpi" src="icon.png" />
+    <icon gap:platform="android" gap:qualifier="mdpi" src="icon.png" />
+    <icon gap:platform="android" gap:qualifier="hdpi" src="icon.png" />
+    <icon gap:platform="android" gap:qualifier="xhdpi" src="icon.png" />
     <icon gap:platform="ios" height="29" src="www/res/icon/ios/icon-29.png" width="29" />
     <icon gap:platform="ios" height="40" src="www/res/icon/ios/icon-40.png" width="40" />
     <icon gap:platform="ios" height="57" src="www/res/icon/ios/icon-57.png" width="57" />
@@ -46,4 +46,16 @@
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="phonegap-version" value="cli-7.1.0" />
     <preference name="pgb-builder-version" value="2" />
+    <preference name="permissions" value="none" />
+    <preference name="orientation" value="portrait" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="target-device" value="universal" />
+    <preference name="webviewbounce" value="true" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="stay-in-webview" value="false" />
+    <preference name="detect-data-types" value="true" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="disable-cursor" value="false" />
+    <preference name="android-installLocation" value="auto" />
+    <preference name="StatusBarBackgroundColor" value="#ffbb55" />
 </widget>

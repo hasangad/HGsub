@@ -1,0 +1,331 @@
+input.required {
+	border-color: #F00;
+}
+label.required::after {
+	content: "*";
+	float: left;
+	color: red;
+	font-size: 16px
+}
+input.required::-webkit-input-placeholder {
+ color:red;
+}
+input.required:-moz-placeholder { /* Firefox 18- */
+ color:red;
+}
+ input.required::-moz-placeholder {  /* Firefox 19+ */
+ color:red;
+}
+
+.code-viewer {
+	font-family: Verdana, Geneva, sans-serif;
+	direction: ltr;
+	font-weight: normal;
+	font-size: 14px;
+	background: #f4f4f4;
+	border: 1px solid #cccccc;
+	margin-bottom: 10px;
+}
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	margin-top: 10px;
+	font-family: 'Droid Arabic Kufi', tahoma;
+	font-weight: 700;
+	margin-bottom: 15px;
+	border-right: 4px #FC0 solid;
+	text-indent: 6px;
+	line-height: 150%
+}
+.h1 {
+	font-size: 22px;
+}
+.h2 {
+	font-size: 20px;
+}
+.h3 {
+	font-size: 18px;
+}
+.h4 {
+	font-size: 16px;
+}
+.h5 {
+	font-size: 14px;
+}
+.h6 {
+	font-size: 12px;
+}
+.label {
+	font-size: 14px;
+	line-height: 30px;
+}
+
+
+::-webkit-scrollbar {
+ width: 8px;
+ height:8px;
+}
+
+
+
+::-webkit-scrollbar-track {
+ background: #FFFFFF;
+ -webkit-box-shadow: inset 1px 1px 2px #E0E0E0;
+ border: 1px solid #D8D8D8;
+}
+
+
+
+::-webkit-scrollbar-thumb {
+ background: #F90;
+ -webkit-box-shadow: inset 1px 1px 2px rgba(155, 155, 155, 0.4);
+}
+
+
+
+::-webkit-scrollbar-thumb:hover {
+ -webkit-box-shadow: inset 1px 1px 10px rgba(0,0,0,0.3);
+ background: #F60;
+}
+
+
+
+::-webkit-scrollbar-thumb:active {
+ background: #F60;
+ -webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.3);
+}
+.form-control {
+	border-radius: 0px;
+}
+.right_bar {
+	right: -8px
+}
+.page-header {
+	margin: 10px 0px;
+}
+/*--- Table ---*/
+
+
+tr th {
+	background: #F7F1E5
+}
+.table-striped>tbody>tr:nth-of-type(odd) {
+/*background-color: #f4f4f4;*/
+}
+.table {
+	background: #ffffff;
+}
+.table tr:first-child td {
+	/*background: #b6995b;*/
+	/*font-family: 'Droid Arabic Kufi', tahoma;*/
+	font-size: 14px;
+}
+.table tr td:first-child {
+	background: #F7F1E5 !important;
+	font-family: 'Droid Arabic Kufi', tahoma;
+	font-size: 13px;
+	text-align: center
+}
+.thead tr th {
+	background: #b6995b;
+	font-family: 'Droid Arabic Kufi', tahoma;
+	font-size: 14px;
+	color: #ffffff;
+}
+.table tr th {
+	/*background: #b6995b;*/
+	font-family: 'Droid Arabic Kufi', tahoma;
+	font-size: 14px;/*color: #ffffff;*/
+}
+.table tr th a {
+	color: #ffffff;
+	white-space: nowrap
+}
+tr td {
+	font-family: 'Droid arabic Naskh', tahoma;
+	font-weight: normal;
+	font-size: 13px;
+	color: #444444;
+}
+
+/* Table .grid .datatable ---------*/
+
+.table thead th, .datatable thead th, .grid thead th, .grid tr:first-child {
+	background: #b6995b;
+	color: #ffffff;
+}
+.grid tr td {
+	/*color: #ffffff;*/
+}
+.datatable tr td:first-child, .grid tr td:first-child {
+	background: #F7F1E5 !important;
+	font-family: 'Droid Arabic Kufi', tahoma;
+	font-size: 13px;
+	text-align: center;
+	/*color: #ffffff;*/
+}
+
+
+/*----------- Table green -------------*/
+
+ .table-green tbody tr:nth-of-type(odd) {
+    background-color: #edf7ee !important;
+}
+       .table-green tr td:first-child {
+            background: #e1efe2 !important;
+        }
+
+      .table-green tr td { line-height: 300%; }
+
+      .table-green tr th {
+            background: #597d5c !important; line-height: 300%;
+        }
+
+
+/*------------*/
+.alert {
+	font-size: 14px
+}
+.alert {
+	font-family: 'Droid Arabic Kufi', tahoma;
+	font-weight: 700
+}
+.alert i {
+	margin-left: 10px
+}
+p {
+	font-size: 13px;
+	font-weight: normal
+}
+.menu-div-fixed {
+	position: fixed;
+	z-index: 9
+}
+.section_title {
+	padding-top: 45px;
+}
+/*--------- Chosen ~ Jquery plugin -----*/
+.chosen-container-single .chosen-single {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	/* padding: 0 0 0 8px;*/
+	height: 180%;
+	border: 1px solid #aaa;
+	border-radius: 0px;
+	background: #fff !important;
+	color: #444;
+	text-decoration: none;
+	white-space: nowrap;
+	line-height: 24px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.chosen-container {
+	margin-right: -1px
+}
+.chosen-container-single .chosen-single {
+	height: 35px
+}
+.chosen-rtl .chosen-single span {
+	line-height: 3em
+}
+.chosen-rtl .chosen-search input[type=text] {
+	font-family: 'Droid Arabic Naskh', tahoma;
+}
+.active-result {
+	padding: 10px 5px !important;
+	-webkit-transition: all 250ms ease-in-out;
+	-moz-transition: all 250ms ease-in-out;
+	-ms-transition: all 250ms ease-in-out;
+	-o-transition: all 250ms ease-in-out;
+	transition: all 250ms ease-in-out;
+}
+.active-result:hover {
+	background: #1ABC9C !important;
+}
+.result-selected {
+	background: #1ABC9C !important;
+	color: #fff !important
+}
+.highlighted {
+	background: #b6995b !important;
+}
+.panel-gold {
+	border-color: #b6995b;
+}
+.panel-gold>.panel-heading {
+	color: #ffffff;
+	background-color: #b6995b;
+	border-color: #b6995b;
+}
+.panel-darkgreen {
+	border-color: #03563a;
+}
+.panel-darkgreen>.panel-heading {
+	color: #ffffff;
+	background-color: #03563a;
+	border-color: #03563a;
+}
+
+.panel-body { position:relative; display: table; width:100% }
+/*.panel-body { overflow:hidden }*/
+.panel .panel-body {
+	font-family: 'Droid arabic Naskh', tahoma;
+	font-size: 13px;
+}
+.panel .panel-footer {
+	font-family: 'Droid arabic Naskh', tahoma;
+	font-size: 13px;
+}
+.form-group-bg {
+	background: #f4f4f4;
+	padding: 0px 0;
+	border: 3px solid #E1E1E1
+}
+.field-row {
+	position: relative;
+	float: right;
+	clear: both;
+	width: 100%;
+	margin-bottom: 0px;
+}
+.form-stripped .field-row {
+	border-bottom: 3px solid #E1E1E1;
+	border-top: 1px solid #f9f9f9;
+}
+.form-stripped .field-row fieldset {
+	padding-top: 15px
+}
+.form-stripped .field-row fieldset:last-child {
+	border-right: 3px solid #E1E1E1
+}
+/*---------- Margin --------------*/
+
+
+.margin-top-5 {
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+.margin-top-10 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.margin-top-15 {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+
+
+
+.form-group {  padding-bottom:10px }
+
+
+
+ @media screen and ( max-width:1200px ) {
+.main-content {
+	overflow: hidden
+}
+}
