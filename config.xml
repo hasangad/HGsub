@@ -9,7 +9,7 @@
     <author email="hasangad.com@gmail.com" href="http://HasanGad.com/blog">
         Gadency Team
     </author>
-    <preference name="phonegap-version" value="cli-6.5.0" />
+  <!--  <preference name="phonegap-version" value="cli-6.5.0" />-->
     <preference name="permissions" value="none" />
     <preference name="orientation" value="portrait" />
     <preference name="DisallowOverscroll" value="true"/>
