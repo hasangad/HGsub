@@ -94,13 +94,13 @@
         <string>100</string>
     </gap:config-file>
     <platform name="android">
-    <splash  qualifier="ldpi" src="www/images/splash.jpg" />
-    <splash  qualifier="mdpi" src="www/images/splash.jpg" />
-    <splash  qualifier="hdpi" src="www/images/splash.jpg" />
-    <splash  qualifier="xhdpi" src="www/images/splash.jpg" />
-    <splash  qualifier="fr-xhdpi" src="www/images/splash.jpg" />
-    <splash  qualifier="port-xxhdpi" src="www/images/splash.jpg" />
-    <splash  qualifier="land-xxhdpi" src="www/images/splash.jpg" />
+    <splash  qualifier="ldpi" src="www/images/splash.png" />
+    <splash  qualifier="mdpi" src="www/images/splash.png" />
+    <splash  qualifier="hdpi" src="www/images/splash.png" />
+    <splash  qualifier="xhdpi" src="www/images/splash.png" />
+    <splash  qualifier="fr-xhdpi" src="www/images/splash.png" />
+    <splash  qualifier="port-xxhdpi" src="www/images/splash.png" />
+    <splash  qualifier="land-xxhdpi" src="www/images/splash.png" />
 </platform>
     <platform name="ios">
       <allow-intent href="itms:*" />
