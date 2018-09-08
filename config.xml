@@ -14,7 +14,7 @@
       <preference name="StatusBarOverlaysWebView" value="true" />
 
 
-    <preference name="phonegap-version" value="cli-7.0.1" />
+    <preference name="phonegap-version" value="cli-7.1.0" />
     <preference name='pgb-builder-version' value='2' />
 
   <!--<engine name="ios" spec="latest" />-->
