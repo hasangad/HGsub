@@ -34,7 +34,7 @@
     <plugin name="cordova-plugin-network-information" />
     <plugin name="cordova-plugin-statusbar" />
     <preference name="StatusBarBackgroundColor" value="#ffbb55" />
-    <preference name="StatusBarStyle" value="lightcontent" />
+    <!--<preference name="StatusBarStyle" value="lightcontent" />-->
 
 
 
