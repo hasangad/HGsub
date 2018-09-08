@@ -67,7 +67,7 @@
     <!--<plugin name="cordova-plugin-vibration" />-->
     <!--<plugin name="cordova-plugin-hidden-statusbar-overlay" />-->
     <icon src="icon.png" />
-    <icon gap:platform="android" src="www/res/icon/ios/icon-1024.png" />
+    <icon gap:platform="android" src="icon.png" />
   <!--  <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/ios/icon-1024.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="www/res/icon/ios/icon-1024.png" />
     <icon gap:platform="android" gap:qualifier="hdpi" src="www/res/icon/ios/icon-1024.png" />
