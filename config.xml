@@ -96,6 +96,8 @@
     <splash  qualifier="land-xxhdpi" src="www/images/splash.jpg" />
 </platform>
     <platform name="ios">
+      <allow-intent href="itms:*" />
+      <allow-intent href="itms-apps:*" />
     <!--<splash src="res/screen/ios/Default@2x~iphone~anyany.png" />
     <splash   src="res/screen/ios/Default@2x~iphone~comany.png" />
     <splash  src="res/screen/ios/Default@2x~iphone~comcom.png" />
@@ -127,10 +129,6 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
-    </platform>
-    <platform name="ios">
-        <allow-intent href="itms:*" />
-        <allow-intent href="itms-apps:*" />
     </platform>
 
 
