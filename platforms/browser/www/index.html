@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <!-- CSS -->
+    <!--<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css" />-->
+    <link rel='stylesheet' id='bootstrap.min-css' href="bs/scss/bootstrap.css" type='text/css' media='all'/>
+    <link rel='stylesheet' id='bootstrap.min-css-rtl' href='bs/scss/bootstrap-rtl.min.css' type='text/css' media='all'/>
+    <link rel='stylesheet' id='css-style' href='css/style.css' type='text/css' media='all'/>
+    <link rel='stylesheet' id='css-style' href="css/fa/css/font-awesome.min.css" type='text/css' media='all'/>
+  </head>
+  <body>
+    <div class="preloader"></div>
+    <div class="splash">
+      <a class="skip_to_home btn btn-primary" style="display:none">تخطي</a>
+      <a class="check_interent btn btn-danger" style="display:none">أنت غير متصل بالانترنت !</a>
+    </div>
+    <div data-role="page" id="main_page">
+      <!-- Start page header -->
+      <div data-role="header" data-position="fixed" class="header">
+        <img src="images/logo.png" alt="" title="" width="" height="" class="logo">
+        <button id="logout" style="display:none">
+          <i class="fa fa-power-off"></i>
+        </button>
+        <!--<a data-icon="bars" data-iconpos="notext" data-role="button" href="#menu" class="bars_icon ui-btn-right">القائمة</a>-->
+      </div>
+      <!-- End page header -->
+      <!-- start page menu -->
+      <div data-role="panel" id="menu" data-position="right" data-display="push">
+        <!--<div class="ui-panel-inner-top-HG"> </div> <ul data-role="listview"> <li data-icon="home" ><a href="#main_page" >الرئيسية</a></li> <li data-icon="arrow-l" ><a href="#main_page" data-transition="slide" data-direction="reverse"
+        data-iconpos="notext">أخبار تقنية </a></li> <li data-icon="arrow-l" ><a href="#main_page" data-transition="slide" data-direction="reverse" data-iconpos="notext">تصميم المواقع</a></li> <li data-icon="arrow-l" ><a href="#main_page"
+        data-transition="slide" data-direction="reverse" data-iconpos="notext">تطوير الووردبريس</a></li> <li data-icon="star" ><a href="#main_page" data-transition="slide" data-direction="reverse" data-iconpos="notext">مفضلتي</a></li> <li data-icon="mail"
+        ><a href="#main_page" data-transition="slide" data-direction="reverse" data-iconpos="notext">القائمة البريدية</a></li> <li data-icon="info" ><a href="#main_page" data-transition="slide" data-direction="reverse" data-iconpos="notext">إسألني
+        سؤالاً</a></li> </ul>-->
+      </div>
+      <!-- /panel - End page menu -->
+      <div role="main" class="ui-content main col-xs-12">
+        <div class="alert alert-success login_success" style="display:none">
+          تم تسجيل دخولك بنجاح
+        </div>
+        <div class="login_form page">
+          <input type="text" class="form-control user" name="user" placeholder="اسم المستخدم" value="" pattern="[a-z]{5,10}" required="required" autofocus="autofocus">
+          <input type="password" class="form-control pass" name="pass" placeholder="كلمة المرور" value="" required="required">
+          <a href="#">نسيت كلمة المرور ؟</a>
+          <button id="login" class="btn btn-success col-xs-12">تسجيل الدخول</button>
+          <a class="search_link">تخطي ، الاستعلام برقم التذكرة فقط .</a>
+        </div>
+        <div class="check_ticket_by_number page" style="display:none"><input type="number" class="form-control t_id" placeholder="اكتب هنا رقم التذكرة" value="" required="required">
+          <button class="col-xs-12 btn btn-success t_show">عرض التذكرة</button>
+        </div>
+        <div role="main" class="col-xs-12 about page" style="display:none">
+          <h1>عن تطبيق دعم عملاء حسن جاد
+          </h1>
+          <p>اسمى : الحسن جاد الله ، أُعرف في مجال حلول مواقع الانترنت بإسم حسن جاد مصمم ومطور مواقع انترنت ( قوالب ووردبريس تحديداً ) 🙂 ، مصري تعلمت العديد من مجالات التصميم وتخصصت في تصميم وتطوير مواقع الإنترنت لا أحب أن أصنف نشاطي على أنني ” شركة رائدة في
+            مجال التصميم – أننا الأفضل – أننا الأكثر إحترافاً – الأعلى مبيعاً – الأكثر شهرة ” صدقاً لا أحب هذه العبارات الرنانة التي لا تعبر عن شخصي بكل بساطة أنا مؤسس موقع HASANGAD.com للتصميم والتطوير ، هو موقع شخصي يقدم خدماته في هدوء ويكفيه رضا عملائه عن
+            الخدمات … انتهى بكل بساطة
+          </p>
+        </div>
+        <!-- End of POSTS / UI CONTENT -->
+        <!-- Start of favs -->
+        <div class="favs container-fluid" style="display:none">
+          <h2 class="h2">زيارات سابقة History</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+        <!-- End of favs -->
+        <!-- start of loggedin user -->
+        <div class="logged_in container-fluid" style="display:none">
+          <div class="tickets">
+            <div class="table-responsive">
+              <table class="authors_table table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <!--<th>رقم التذكرة</th>-->
+                    <th>اسم التذكرة</th>
+                    <th>حالة التذكرة
+                    </th>
+                    <!--<th>درجة الأهمية</th> <th>تاريخ الإنشاء </th> <th>قسم</th>-->
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- End of loggedin user -->
+        <div class="posts"></div>
+      </div>
+      <!-- End of POSTS / UI CONTENT -->
+    </div>
+    <!-- End Of main page -->
+    <div class="app_body container-fluid">
+      <!-- <div class="hr"></div> -->
+      <div class="posts container-fluid"></div>
+      <!-- End of about -->
+    </div>
+    <!-- End of app body -->
+    <!-- JavaScript -->
+    <!--<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script> -->
+    <div class="main_menu bottom_buttons">
+      <a href="index.html" class="active">
+        <i class="fa fa-home"></i>
+        <span>الرئيسية</span></a>
+      <a class="login_link">
+        <i class="fa fa-lock"></i>
+        <span>تسجيل الدخول</span></a>
+      <a class="search_link">
+        <i class="fa fa-search"></i>
+        <span>الإستعلام برقم التذكرة</span></a>
+      <a class="show_favorites">
+        <i class="fa fa-star"></i>
+        <span>المفضلة</span></a>
+      <a class="show_about">
+        <i class="fa fa-info"></i>
+        <span>عن التطبيق</span></a>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="js/index.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+    <!--<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.js"></script> <script src="js/jquery.mobile-1.4.5.js"></script>-->
+    <script>
+      //alert('test');
+      /*  $.mobile.changePage("nextPage.html", {
+          transition: "slide",
+          reverse: true
+        });*/
+    </script>
+    <script>
+      //$get_favs_array = localStorage.removeItem("favs");
+      $(document).on('click', '.t_show', function () {
+        if ($(".t_id").val() !== "") {
+          $(".preloader").fadeIn();
+          $t_id = $(".t_id").val();
+          /*https://stackoverflow.com/questions/43762363/how-to-store-an-array-of-objects-in-local-storage
+            To store the array, do what you're doing:
+`            localStorage.setItem("users", JSON.stringify(users));
+            To get the array:
+            users = JSON.parse(localStorage.getItem("users") || "[]");
+            Note how that provides a default (empty array) if getItem returns null because we've never stored our users there.
+            To add a user to the array:
+            users.push({id: 1, foo: "bar"});*/
+          //To store the array, do what you're doing: localStorage.setItem("favs", JSON.stringify(favs));
+          var favs = JSON.parse(localStorage.getItem("favs") || "[]");
+          console.log("# of favs: " + favs.length);
+          favs.forEach(function (fav, index) {
+            console.log("[" + index + "]: " + fav.id);
+          });
+          //localStorage.checked_tickets =+ $t_id; alert($t_id);
+          var url = "https://hasangad.com/support/api/?Ticket_id=" + $t_id;
+          //alert(url);
+          $.getJSON(url, function (tick) {
+            //alert("test"); console.log(result);
+            $("#main_page .posts").html("");
+            $("#main_page .posts").append('<div class="col-xs-12"><h2>' + tick['ticket'].title + '</h2><span class="btn btn-warning">' + tick['ticket'].status + '</span></div>');
+            $.each(tick['comment'], function (i, comment) {
+              //alert('inside comments');
+              $("#main_page .posts").append('<div class="col-xs-12 comment"><h2>' + comment.c_date + '</h2><p>' + comment.content + '</p></div>');
+            });
+            $("#main_page .posts").append('<div class="col-xs-12"><p>' + tick['ticket'].content + '</p></div>');
+            //var checked_tickets = []; checked_tickets[0] = prompt("New member name?");
+            /*$checked_tickets[0] = $t_id;*/
+            /*  localStorage.setItem("checked_tickets", JSON.stringify(checked_tickets));*/
+            /*... var storedNames = JSON.parse(localStorage.getItem("checked_tickets")); */
+            /*localStorage.checked_tickets = "";*/
+            $CheckExistsFavs = favs.indexOf($t_id);
+            //alert($CheckExistsFavs);
+            if ($CheckExistsFavs == -1) {
+              favs.push($t_id);
+              // Saving
+              localStorage.setItem("favs", JSON.stringify(favs));
+              //alert(localStorage.getItem("favs"));
+            }
+            $(".preloader").fadeOut();
+          });
+        }
+      });
+      $(document).ready(function () {
+        // Check of user logged in before and stored by webstorage
+        $storedName = localStorage.getItem('login_is');
+        $storedPw = localStorage.getItem('pass_is');
+        $storedID = localStorage.getItem('u_id');
+        //alert($storedName);
+        if ((($storedName !== "") && ($storedPw !== "")) && (($storedName !== null) && ($storedPw !== null))) {
+          //alert('You are loged in.');
+          $(".login_success").html("مرحباً بعودتك / " + $storedName);
+          $(".login_success").fadeIn("1000");
+          $(".login_form").hide();
+          $(".logged_in").show();
+          $("#logout").show();
+          // Get Tickets
+          var dataString = "get_tickets=true&user=" + $storedID;
+          var url_user_tickets = "https://hasangad.com/support/api/?" + dataString;
+          $.getJSON(url_user_tickets, function (u_ticks) {
+            $.each(u_ticks, function (i, tr) {
+              //alert('inside comments'); $(".logged_in table tbody").append('<tr><td><a datalink="" onclick="notify(' + tr.td_id + ')">' + tr.name + '</a></td></tr>');
+              $(".logged_in table tbody").append(tr.tr);
+            });
+            //  $("#main_page .posts").append('<div class="col-xs-12"><h2>' + tick['ticket'].title + '</h2><span class="btn btn-warning">' + tick['ticket'].status + '</span></div>');
+          });
+        }/*else {
+          alert('ERROR.');
+        }*/
+        ////////////// Login Form /
+        $("#logout").click(function () {
+          localStorage.login_is = "";
+          localStorage.pass_is = "";
+          localStorage.u_id = "";
+          window.location.href = "index.html";
+        });
+        $("#login").click(function () {
+          $("#login").html('جار التحقق ...');
+          var user = $(".user").val();
+          var pass = $(".pass").val();
+          //alert(user); var dataString = "user=" + user + "&pass=" + pass + "&login=";
+          var dataString = "user=" + user + "&pass=" + pass;
+          var url2 = "https://hasangad.com/support/api/?" + dataString;
+          $.getJSON(url2, function (login) {
+            //alert("test"); console.log(result);
+            $login_status = login.status;
+            $u_id = login.u_id;
+            if ($login_status == true) {
+              // REFRENCE : https://www.w3schools.com/html/html5_webstorage.asp https://www.w3schools.com/jsref/prop_win_localstorage.asp
+              localStorage.login_is = user;
+              localStorage.pass_is = pass;
+              localStorage.u_id = $u_id;
+              //alert("Login Success");
+              $(".login_form").stop().slideToggle();
+              $(".login_success").fadeIn("1000");
+              $("#logout").slideDown("1000");
+              var url_user_tickets = "https://hasangad.com/support/api/?get_tickets=true&user=" + $u_id;
+              $.getJSON(url_user_tickets, function (u_ticks) {
+                $.each(u_ticks, function (i, tr) {
+                  //alert('inside comments');
+                  $(".logged_in table tbody").append(tr.tr);
+                  $(".logged_in").fadeIn("1000");
+                });
+              });
+              //$(".login_success").fadeOut("3000");
+            } else if ($login_status == false) {
+              $("#login").html('تسجيل الدخول');
+            }
+            //  $("#main_page .posts").append('<div class="col-xs-12"><h2>' + tick['ticket'].title + '</h2><span class="btn btn-warning">' + tick['ticket'].status + '</span></div>');
+          });
+          // https://codesundar.com/lesson/phonegap-login-system-using-php-mysql/
+          /*  if (user.length > 0 & pass.length > 0) {
+            //  alert("Now Ajax");
+            $.ajax({
+              type: "GET",
+              url: url,
+              data: dataString,
+              crossDomain: true,
+              cache: false,
+              beforeSend: function () {
+                $("#login").html('Connecting...');
+              },
+              success: function (data) {
+                console.log(data);
+                if (data == "success") {
+                  localStorage.login = "true";
+                  localStorage.email = user;
+                  //localStorage.email = email;
+                  window.location.href = "index.html";
+                } else if (data = "failed") {
+                  console.log(data);
+                  //alert("Login error");
+                  $("#login").html('Login');
+                }
+              }
+            }).done(function (data) {
+              //alert("Done");  }
+            });
+          }
+          return false;*/
+        });
+        ///////////////////////////////////////
+        $(".main_menu a i").click(function () {
+          $(".main_menu a i").css({"color": "#888888"});
+          $(this).css({"color": "#FFBD54"});
+        });
+        $(".skip_to_home").click(function () {
+          $(".splash").animate({"right": "-100%"});
+        });
+        $(".login_link").click(function () {
+          $(".login_form").stop().slideToggle();
+          $(".check_ticket_by_number").slideUp();
+          $(".logged_in").slideUp();
+          $(".about").slideUp();
+          $(".favs").slideUp();
+          $(".posts").html("");
+        });
+        $(".search_link").click(function () {
+          $(".login_form").slideUp();
+          $(".about").slideUp();
+          $(".favs").slideUp();
+          $(".logged_in").slideUp();
+          $(".check_ticket_by_number").stop().slideToggle();
+          $(".posts").html("");
+        });
+        $(".show_about").click(function () {
+          $(".about").stop().slideToggle();
+          $(".favs").slideUp();
+          $(".logged_in").slideUp();
+          $(".check_ticket_by_number").slideUp();
+          $(".login_form").slideUp();
+          $(".posts").html("");
+        });
+        $(".show_favorites").click(function () {
+          $(".favs").stop().slideToggle();
+          $(".about").slideUp();
+          $(".logged_in").slideUp();
+          $(".check_ticket_by_number").slideUp();
+          $(".login_form").slideUp();
+          $(".posts").html("");
+          $get_favs_array = localStorage.getItem("favs");
+          if ($get_favs_array !== "" || $get_favs_array !== null) {
+            $new_favs = $.parseJSON($get_favs_array);
+            if ($new_favs !== null) {
+              $.each($new_favs, function (i, fav) {
+                //alert(fav);
+                var url = "https://hasangad.com/support/api/?Ticket_id=" + fav;
+                //alert(url);
+                $(".favs table tbody").html("");
+                $.getJSON(url, function (tick) {
+                  //alert("test"); console.log(result); $u_fake_id = $storedID * 2; alert($u_fake_id);  alert(fav); $fav_is = fav;
+                  $(".favs table tbody").append(
+                    '<tr><td><a href="#" data-link="' + fav + '" class="ticket_link" onclick="notify(' + fav + ')">' + tick['ticket'].title + '</a></td><td><span class = "btn btn-warning" > ' + tick['ticket'].status + '</span></td></tr> '
+                  );
+                });
+              });
+            }
+          }
+        });
+        $(".preloader").fadeOut(500);
+      });
+      // https://stackoverflow.com/questions/6466135/adding-extra-zeros-in-front-of-a-number-using-jquery
+      function pad(str, max) {
+        str = str.toString();
+        return str.length < max
+          ? pad("0" + str, max)
+          : str;
+      }
+      function notify(T_id_is) {
+        //console.log(T_id_is); debugger; alert("clicked"); $(".ticket_link").on("click", notify); alert('test'); alert(T_id_is);
+        $fav_is = pad(T_id_is, 7);
+        //alert($fav_is);
+        if ($fav_is !== "") {
+          $(".preloader").fadeIn();
+          $t_id = $fav_is;
+          var url = "https://hasangad.com/support/api/?Ticket_id=" + $t_id;
+          $.getJSON(url, function (tick) {
+            $("#main_page .posts").html("");
+            $("#main_page .posts").append('<div class="col-xs-12"><h2>' + tick['ticket'].title + '</h2><span class="btn btn-warning">' + tick['ticket'].status + '</span></div>');
+            $.each(tick['comment'], function (i, comment) {
+              $("#main_page .posts").append('<div class="col-xs-12 comment"><h2>' + comment.c_date + '</h2><p>' + comment.content + '</p></div>');
+            });
+            $("#main_page .posts").append('<div class="col-xs-12 main_ticket"><p>' + tick['ticket'].content + '</p></div>');
+            $(".preloader").fadeOut();
+          });
+        }
+      }
+      $(document).on('click', '#ticket_link', function () {
+        $t_id_from_link_data = $(this).data('link');
+        notify($t_id_from_link_data);
+      });
+    </script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+      app.initialize();
+    </script>
+    <!--Start of Tawk.to Script-->
+    <!--<script type="text/javascript"> var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date(); (function () { var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0]; s1.async = true; s1.src =
+    'https://embed.tawk.to/591affdd64f23d19a89b256c/default'; s1.charset = 'UTF-8'; s1.setAttribute('crossorigin', '*'); s0.parentNode.insertBefore(s1, s0); })(); </script>-->
+    <!--End of Tawk.to Script-->
+  </body>
+</html>
