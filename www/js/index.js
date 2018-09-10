@@ -70,13 +70,13 @@ var app = {
     //FCMPlugin.onTokenRefresh( onTokenRefreshCallback(token) );
     //Note that this callback will be fired everytime a new token is generated, including the first time.
     FCMPlugin.onTokenRefresh(function(token) {
-      alert(token);
+      //alert(token);
       localStorage.MobileToken = token;
     });
     //FCMPlugin.getToken( successCallback(token), errorCallback(err) );
     //Keep in mind the function will return null if the token has not been established yet.
     FCMPlugin.getToken(function(token) {
-      alert(token);
+      //alert(token);
       localStorage.MobileToken = token;
 
     });
