@@ -221,7 +221,7 @@ form a, .login_form a, .check_ticket_by_number a {
 #logout {
   position: absolute;
   left: 10px;
-  top: 6px;
+  top: 28%;
   border-radius: 100%;
   border: 0;
   padding: 4px 8px;

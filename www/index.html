@@ -31,11 +31,6 @@
     <!-- End page header -->
     <!-- start page menu -->
     <div data-role="panel" id="menu" data-position="right" data-display="push">
-      <!--<div class="ui-panel-inner-top-HG"> </div> <ul data-role="listview"> <li data-icon="home" ><a href="#main_page" >الرئيسية</a></li> <li data-icon="arrow-l" ><a href="#main_page" data-transition="slide" data-direction="reverse"
-        data-iconpos="notext">أخبار تقنية </a></li> <li data-icon="arrow-l" ><a href="#main_page" data-transition="slide" data-direction="reverse" data-iconpos="notext">تصميم المواقع</a></li> <li data-icon="arrow-l" ><a href="#main_page"
-        data-transition="slide" data-direction="reverse" data-iconpos="notext">تطوير الووردبريس</a></li> <li data-icon="star" ><a href="#main_page" data-transition="slide" data-direction="reverse" data-iconpos="notext">مفضلتي</a></li> <li data-icon="mail"
-        ><a href="#main_page" data-transition="slide" data-direction="reverse" data-iconpos="notext">القائمة البريدية</a></li> <li data-icon="info" ><a href="#main_page" data-transition="slide" data-direction="reverse" data-iconpos="notext">إسألني
-        سؤالاً</a></li> </ul>-->
     </div>
     <!-- /panel - End page menu -->
     <div role="main" class="ui-content main col-xs-12">
@@ -219,12 +214,15 @@
         $("#login").html('جار التحقق ...');
         var user = $(".user").val();
         var pass = $(".pass").val();
+        var MobileToken = localStorage.MobileToken;
         //alert(user); var dataString = "user=" + user + "&pass=" + pass + "&login=";
-        var dataString = "user=" + user + "&pass=" + pass;
+        var dataString = "user=" + user + "&pass=" + pass + "&UpdateMobileToken=" + MobileToken;
         var url2 = "https://hasangad.com/support/api/?" + dataString;
         $.getJSON(url2, function(login) {
           //alert("test"); console.log(result);
           $login_status = login.status;
+          $MobileTokenDB = login.MobileTokenDB;
+          $MobileTokenStatus = login.MobileTokenStatus;
           $u_id = login.u_id;
           if ($login_status == true) {
             // REFRENCE : https://www.w3schools.com/html/html5_webstorage.asp https://www.w3schools.com/jsref/prop_win_localstorage.asp
@@ -232,6 +230,8 @@
             localStorage.pass_is = pass;
             localStorage.u_id = $u_id;
             //alert("Login Success");
+            alert($MobileTokenDB);
+
             $(".login_form").stop().slideToggle();
             $(".login_success").fadeIn("1000");
             $("#logout").slideDown("1000");
@@ -325,6 +325,9 @@
         $(".check_ticket_by_number").slideUp();
         $(".login_form").slideUp();
         $(".posts").html("");
+
+        /*////////////// get_favs_array///////////////*/
+
         $get_favs_array = localStorage.getItem("favs");
         if ($get_favs_array !== "" || $get_favs_array !== null) {
           $new_favs = $.parseJSON($get_favs_array);
