@@ -216,17 +216,22 @@
         window.location.href = "index.html";
       });
       $("#login").click(function() {
+        //debugger;
         $("#login").html('جار التحقق ...');
         var user = $(".user").val();
         var pass = $(".pass").val();
+        //var MobileToken = localStorage.MobileToken;
         var MobileToken = localStorage.MobileToken;
         //alert(MobileToken);
-        //alert(user); var dataString = "user=" + user + "&pass=" + pass + "&login=";
+        //alert(user);
+        //var dataString = "user=" + user + "&pass=" + pass + "&login=";
         var dataString = "user=" + user + "&pass=" + pass + "&UpdateMobileToken=" + MobileToken;
         var url2 = "https://hasangad.com/support/api/?" + dataString;
+        //debugger;
         $.getJSON(url2, function(login) {
+          //debugger;
           //alert("test");
-          console.log(result);
+          console.log(login);
           $login_status = login.status;
           $MobileTokenDB = login.MobileTokenDB;
           $MobileTokenStatus = login.MobileTokenStatus;
@@ -385,6 +390,7 @@
     });
   </script>
   <script type="text/javascript" src="cordova.js"></script>
+  <!--<script type="text/javascript" src="js/plugins/FCMPlugin.js"></script>-->
   <script type="text/javascript" src="js/index.js"></script>
   <script type="text/javascript">
     app.initialize();
