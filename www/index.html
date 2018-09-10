@@ -215,6 +215,7 @@
         var user = $(".user").val();
         var pass = $(".pass").val();
         var MobileToken = localStorage.MobileToken;
+        alert(MobileToken);
         //alert(user); var dataString = "user=" + user + "&pass=" + pass + "&login=";
         var dataString = "user=" + user + "&pass=" + pass + "&UpdateMobileToken=" + MobileToken;
         var url2 = "https://hasangad.com/support/api/?" + dataString;
@@ -382,7 +383,7 @@
       notify($t_id_from_link_data);
     });
   </script>
-  <script type="text/javascript" src="cordova.js"></script>
+  <!--<script type="text/javascript" src="cordova.js"></script>-->
   <script type="text/javascript" src="js/index.js"></script>
   <script type="text/javascript">
     app.initialize();
