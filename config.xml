@@ -32,6 +32,7 @@
   <plugin name="cordova-plugin-device"/>
   <plugin name="cordova-plugin-network-information"/>
   <plugin name="cordova-plugin-statusbar"/>
+    <plugin name="cordova-plugin-vibration" />
   <preference name="StatusBarBackgroundColor" value="#ffbb55"/>
   <!--<preference name="StatusBarStyle" value="lightcontent" />-->
 
