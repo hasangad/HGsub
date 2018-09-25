@@ -415,10 +415,8 @@ $(document)
 		if ((($storedName !== "") && ($storedPw !== "")) && (($storedName !== null) && ($storedPw !== null))) {
 			$('.login_form, .login_link')
 				.remove();
-			$('.slide')
-				.hide();
-			$('.new_user_home')
-				.hide();
+			//$('.slide').hide();
+			//$('.new_user_home').hide();
 			$(".login_success")
 				.html("مرحباً بعودتك / " + $storedName);
 			$(".login_success")
