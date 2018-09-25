@@ -1,7 +1,14 @@
 /*------------------------------------*/
+function pad(str, max) {
+	str = str.toString();
+	return str.length < max ? pad("0" + str, max) : str;
+}
+
 function notify(T_id_is) {
-	//console.log(T_id_is); debugger; alert("clicked"); $(".ticket_link").on("click", notify); alert('test'); alert(T_id_is);
-	$fav_is = pad(T_id_is, 7);
+	//console.log(T_id_is); debugger; alert("clicked"); $(".ticket_link").on("click", notify); alert('test');
+	alert(T_id_is);
+	//$fav_is = pad(T_id_is, 9);
+	$fav_is = T_id_is;
 	//alert($fav_is);
 	if ($fav_is !== "") {
 		$(".preloader")
@@ -29,6 +36,33 @@ function notify(T_id_is) {
 				.fadeOut();
 		});
 	}
+}
+var MenuPos = 0;
+
+function show_menu() {
+	//$("#show_menu").click(function() {
+	if (MenuPos == 0) {
+		$(".bottom_buttons")
+			.animate({
+				"left": "0"
+			});
+		$("#main_page")
+			.animate({
+				"left": "80%"
+			});
+		MenuPos = 1;
+	} else {
+		$(".bottom_buttons")
+			.animate({
+				"left": "-80%"
+			});
+		$("#main_page")
+			.animate({
+				"left": "0%"
+			});
+		MenuPos = 0;
+	}
+	//});
 }
 var password = document.getElementById("password"),
 	confirm_password = document.getElementById("confirm_password");
@@ -399,11 +433,6 @@ $('.add_ticket')
 				"opacity": "0.92"
 			});
 	});
-
-function pad(str, max) {
-	str = str.toString();
-	return str.length < max ? pad("0" + str, max) : str;
-}
 $(document)
 	.ready(function() {
 		/*------------------------------------*/

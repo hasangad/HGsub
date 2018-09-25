@@ -1,6 +1,6 @@
 /*body { background:#f8f8f8 url(images/logo-2.jpg) top center no-repeat; padding-top:120px; background-size:contain; }*/
+@import url(https: //fonts.googleapis.com/earlyaccess/droidarabickufi.css);
 
-@import url(https://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
 h1, h2, h3, h4, h5, h6, a {
   font-family: "Droid Arabic Kufi", tahoma;
   font-weight: 700
@@ -42,6 +42,10 @@ body {
   padding-top: env(safe-area-inset-top); //for iOS 11.1
 }
 
+.ticket_link {
+  font-weight: 400;
+}
+
 .main_menu {
   display: table;
   margin: 5px auto;
@@ -51,7 +55,7 @@ body {
   display: block;
   background: #ffffff url(../images/loading.gif) center center no-repeat;
   background-size: 35% 20%;
-  z-index: 111111;
+  z-index: 99999999;
   position: absolute;
   left: 0;
   top: 0;
@@ -64,7 +68,7 @@ body {
   display: block;
   background: #ffffff url(../images/splash.jpg) center center no-repeat;
   background-size: 100% 100%;
-  z-index: 111110;
+  z-index: 99999999;
   position: absolute;
   width: 100%;
   left: 0;
@@ -101,18 +105,28 @@ body {
   overflow: hidden;
 }
 
+.main_menu {
+  position: fixed;
+  top: 0;
+  left: -80%;
+  bottom: 0;
+  width: 80%;
+  z-index: 999999;
+  background: rgba(0, 0, 0, 0.85);
+  margin-bottom: constant(safe-area-inset-bottom);
+  /* iOS 11.0 */
+  margin-bottom: env(safe-area-inset-bottom);
+  /* iOS 11.2 */
+  padding: 8px;
+  height: 100vh;
+  margin: 0
+}
+
 .main_menu a {
-  display: inline-block;
-  width: 48%;
-  font-weight: 400;
-  display: inline-block;
-  padding: 15px 10px;
-  border: 1px solid #eeeeee;
-  border-radius: 4px;
-  margin: 15px 1%;
-  color: #888888;
-  text-align: center;
-  background: #ffffff;
+  display: block;
+  width: 100%;
+  clear: both;
+  margin: 15px 0;
 }
 
 form a, .login_form a, .check_ticket_by_number a {
@@ -132,11 +146,13 @@ form a, .login_form a, .check_ticket_by_number a {
 }
 
 .main_menu a i {
-  display: table;
-  font-size: 2em;
+  float: right;
+  font-size: 1.70em;
   font-weight: 400;
   color: #888888;
-  margin: 5px auto;
+  width: 32px;
+  text-align: center;
+  margin: 7px auto;
 }
 
 .main_menu a i:active {
@@ -144,37 +160,14 @@ form a, .login_form a, .check_ticket_by_number a {
 }
 
 .main_menu a span {
-  display: block;
+  float: right;
   color: #888888;
   white-space: nowrap;
-}
-
-.bottom_buttons {
-  opacity: 0.97;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  margin: 0;
-  margin-bottom: constant(safe-area-inset-bottom);
-  /* iOS 11.0 */
-  margin-bottom: env(safe-area-inset-bottom);
-  /* iOS 11.2 */
-}
-
-.bottom_buttons a {
-  float: right;
-  width: 20%;
-  margin: 0;
-  border-radius: 0;
-}
-
-.bottom_buttons a span {
-  display: none
+  font-family: "Droid Arabic Kufi", tahoma;
+  padding: 11px;
 }
 
 /* RTL JQUERY MOBILE  */
-
 .ui-btn-icon-right:after {
   left: .5625em !important;
   right: auto;
@@ -219,18 +212,7 @@ form a, .login_form a, .check_ticket_by_number a {
 }
 
 #logout {
-  position: absolute;
-  left: 10px;
-  top: 28%;
-  border-radius: 100%;
-  border: 0;
-  padding: 4px 8px;
   background: red;
-}
-
-#logout i {
-  color: #ffffff;
-  font-size: 1.8em;
 }
 
 .ui-page-theme-a .ui-btn {
@@ -276,7 +258,6 @@ form a, .login_form a, .check_ticket_by_number a {
 }
 
 /*---End of rtl jquery mobile ---*/
-
 table, th, td {
   border: 1px solid #cccccc !important;
 }
@@ -306,9 +287,9 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
 
 .header {
   background-color: #FFBD54 !important;
-  height: 10%;
+  height: 1%;
   margin-bottom: 50px;
-  z-index: 99999;
+  z-index: 9999999;
   position: fixed;
   left: 0;
   right: 0;
@@ -317,6 +298,8 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
 
 #main_page {
   padding-top: 14vh;
+  height: 86vh;
+  position: relative;
 }
 
 #menu {
@@ -364,10 +347,35 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
   margin-top: 14px;
 }
 
+.MenuBurger {
+  position: fixed;
+  left: 3%;
+  top: 3%;
+  font-size: 2.5em;
+  background: #fff;
+  padding: 0px 5px;
+  border-radius: 2px;
+}
+
+.MenuBurger i {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 2%, rgba(255, 245, 232, 1) 100%, rgba(255, 245, 232, 1) 102%);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 2%, rgba(255, 245, 232, 1) 100%, rgba(255, 245, 232, 1) 102%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 2%, rgba(255, 245, 232, 1) 100%, rgba(255, 245, 232, 1) 102%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#fff5e8', GradientType=0);
+}
+
 .logo {
   max-width: 25%;
   display: block;
-  margin: 10% auto 0 auto;
+  margin: -22px -26px;
   text-align: center;
 }
 
@@ -591,7 +599,7 @@ form label {
   margin-bottom: 10px;
   width: 100%;
   border: none;
-  border-bottom: 3px solid #ffbd54;
+  border-bottom: 1px solid #ffbd54;
 }
 
 iframe {
