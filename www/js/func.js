@@ -413,6 +413,8 @@ $(document)
 		$storedAccType = localStorage.getItem('acc_type');
 		//alert($storedName + $storedPw + $storedID);
 		if ((($storedName !== "") && ($storedPw !== "")) && (($storedName !== null) && ($storedPw !== null))) {
+			$('.login_form, .login_link')
+				.remove();
 			$('.slide')
 				.hide();
 			$('.new_user_home')
