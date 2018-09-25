@@ -131,18 +131,10 @@
     </script>
     <script>
       //$get_favs_array = localStorage.removeItem("favs");
-      $(document).on('click', '.t_show', function () {
+      /*  $(document).on('click', '.t_show', function () {
         if ($(".t_id").val() !== "") {
           $(".preloader").fadeIn();
           $t_id = $(".t_id").val();
-          /*https://stackoverflow.com/questions/43762363/how-to-store-an-array-of-objects-in-local-storage
-            To store the array, do what you're doing:
-`            localStorage.setItem("users", JSON.stringify(users));
-            To get the array:
-            users = JSON.parse(localStorage.getItem("users") || "[]");
-            Note how that provides a default (empty array) if getItem returns null because we've never stored our users there.
-            To add a user to the array:
-            users.push({id: 1, foo: "bar"});*/
           //To store the array, do what you're doing: localStorage.setItem("favs", JSON.stringify(favs));
           var favs = JSON.parse(localStorage.getItem("favs") || "[]");
           console.log("# of favs: " + favs.length);
@@ -162,10 +154,6 @@
             });
             $("#main_page .posts").append('<div class="col-xs-12"><p>' + tick['ticket'].content + '</p></div>');
             //var checked_tickets = []; checked_tickets[0] = prompt("New member name?");
-            /*$checked_tickets[0] = $t_id;*/
-            /*  localStorage.setItem("checked_tickets", JSON.stringify(checked_tickets));*/
-            /*... var storedNames = JSON.parse(localStorage.getItem("checked_tickets")); */
-            /*localStorage.checked_tickets = "";*/
             $CheckExistsFavs = favs.indexOf($t_id);
             //alert($CheckExistsFavs);
             if ($CheckExistsFavs == -1) {
@@ -201,12 +189,9 @@
             });
             //  $("#main_page .posts").append('<div class="col-xs-12"><h2>' + tick['ticket'].title + '</h2><span class="btn btn-warning">' + tick['ticket'].status + '</span></div>');
           });
-        }
-        /*else {
-                alert('ERROR.');
-              }*/
-        ////////////// Login Form /
-        $("#logout").click(function () {
+        }*/
+      ////////////// Login Form /
+      /*  $("#logout").click(function () {
           localStorage.login_is = "";
           localStorage.pass_is = "";
           localStorage.u_id = "";
@@ -282,10 +267,10 @@
             //alert("Done");  }
           });
         }
-        return false;*/
-        });
-        ///////////////////////////////////////
-        $(".main_menu a i").click(function () {
+        return false;
+      });*/
+      ///////////////////////////////////////
+      /*  $(".main_menu a i").click(function () {
           $(".main_menu a i").css({"color": "#888888"});
           $(this).css({"color": "#FFBD54"});
         });
@@ -343,7 +328,8 @@
           }
         });
         $(".preloader").fadeOut(500);
-      });
+      }
+    );*/
       // https://stackoverflow.com/questions/6466135/adding-extra-zeros-in-front-of-a-number-using-jquery
       function pad(str, max) {
         str = str.toString();
@@ -351,7 +337,7 @@
           ? pad("0" + str, max)
           : str;
       }
-      function notify(T_id_is) {
+      /*  function notify(T_id_is) {
         //console.log(T_id_is); debugger; alert("clicked"); $(".ticket_link").on("click", notify); alert('test'); alert(T_id_is);
         $fav_is = pad(T_id_is, 7);
         //alert($fav_is);
@@ -373,8 +359,9 @@
       $(document).on('click', '#ticket_link', function () {
         $t_id_from_link_data = $(this).data('link');
         notify($t_id_from_link_data);
-      });
+      });*/
     </script>
+    <script type="text/javascript" src="js/func.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
