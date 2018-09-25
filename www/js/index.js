@@ -65,7 +65,7 @@ var app = {
 			// Vibrate for 3 seconds
 			// Wait for 1 second
 			// Vibrate for 5 seconds
-			navigator.vibrate([1000, 1000, 3000, 1000, 5000]);
+			//	navigator.vibrate([1000, 1000, 3000, 1000, 5000]);
 		}
 		checkConnection();
 		//FCMPlugin.subscribeToTopic( topic, successCallback(msg), errorCallback(err) );

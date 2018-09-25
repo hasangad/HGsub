@@ -406,6 +406,10 @@ function pad(str, max) {
 }
 $(document)
 	.ready(function() {
+		/*------------------------------------*/
+		$(".preloader")
+			.fadeOut(500);
+		/*------------------------------------*/
 		/*Check of user logged in before and stored by webstorage*/
 		$storedName = localStorage.getItem('login_is');
 		$storedPw = localStorage.getItem('pass_is');
