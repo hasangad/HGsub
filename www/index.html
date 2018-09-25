@@ -8,7 +8,7 @@
     <link rel='stylesheet' id='bootstrap.min-css' href="css/bootstrap.css" type='text/css' media='all'/>
     <link rel='stylesheet' id='bootstrap.min-css-rtl' href='css/bootstrap-rtl.min.css' type='text/css' media='all'/>
     <link rel='stylesheet' id='css-style' href='css/style.css' type='text/css' media='all'/>
-    <link rel='stylesheet' id='css-style' href="css/fa/css/font-awesome.min.css" type='text/css' media='all'/>
+    <link rel='stylesheet' id='css-style2' href="css/fa/css/font-awesome.min.css" type='text/css' media='all'/>
   </head>
   <body>
     <div class="preloader"></div>
@@ -69,16 +69,15 @@
         </div>
         <!-- End of favs -->
         <!-- start of loggedin user -->
-        <div class="logged_in container-fluid" style="display:none">
+        <div class="logged_in container-fluid no-padding" style="display:none">
           <div class="tickets">
             <div class="table-responsive">
               <table class="authors_table table table-bordered table-striped">
                 <thead>
                   <tr>
-                    <!--<th>رقم التذكرة</th>-->
+                    <th>رقم التذكرة</th>
                     <th>اسم التذكرة</th>
-                    <th>حالة التذكرة
-                    </th>
+                    <th>حالة التذكرة</th>
                     <!--<th>درجة الأهمية</th> <th>تاريخ الإنشاء </th> <th>قسم</th>-->
                   </tr>
                 </thead>
@@ -99,6 +98,30 @@
       <!-- End of about -->
     </div>
     <!-- End of app body -->
+    <div id="new_user" class="page col-xs-12 no-padding" style="display:none">
+      <h2 class="title h2 col-xs-12">
+        <i class="fa fa-list"></i>تسجيل مستخدم جديد
+      </h2>
+      <!-- start new user -->
+      <div id="new_user_holder" class=" col-xs-12 no-padding">
+        <form id="creat_new_user" class="col-xs-12" onsubmit="return false">
+          <fieldset>
+            <input type="email" class="form-control user_email" placeholder="البريد الإلكتروني" value="" required="required"/>
+          </fieldset>
+          <fieldset>
+            <input type="number" placeholder="رقم الجوال بدون صفر 550000000" value="" class="form-control user_mobile" required="required"/>
+          </fieldset>
+          <fieldset>
+            <input id="password" class="form-control user_pass" type="password" placeholder="كلمة المرور" value="" required="required"/>
+          </fieldset>
+          <fieldset>
+            <input id="confirm_password" type="password" placeholder="تأكيد كلمة المرور" value="" class="form-control user_re_pass" required="required"/>
+          </fieldset>
+          <button class="btn btn-success order_pr col-xs-12" onclick="new_user()">تسجيل</button>
+        </form>
+      </div>
+      <!-- End of new user div -->
+    </div>
     <!-- JavaScript -->
     <!--<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script> -->
     <div class="main_menu bottom_buttons">
@@ -331,12 +354,12 @@
       }
     );*/
       // https://stackoverflow.com/questions/6466135/adding-extra-zeros-in-front-of-a-number-using-jquery
-      function pad(str, max) {
+      /*  function pad(str, max) {
         str = str.toString();
         return str.length < max
           ? pad("0" + str, max)
           : str;
-      }
+      }*/
       /*  function notify(T_id_is) {
         //console.log(T_id_is); debugger; alert("clicked"); $(".ticket_link").on("click", notify); alert('test'); alert(T_id_is);
         $fav_is = pad(T_id_is, 7);
@@ -362,7 +385,7 @@
       });*/
     </script>
     <script type="text/javascript" src="js/func.js"></script>
-    <script type="text/javascript" src="cordova.js"></script>
+    <!--<script type="text/javascript" src="cordova.js"></script>-->
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
       app.initialize();

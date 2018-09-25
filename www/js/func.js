@@ -7,7 +7,7 @@ function notify(T_id_is) {
 		$(".preloader")
 			.fadeIn();
 		$t_id = $fav_is;
-		var url = "https://janatech.sa/api/?Ticket_id=" + $t_id;
+		var url = "https://hasangad.com/support/api/?Ticket_id=" + $t_id;
 		$.getJSON(url, function(tick) {
 			$("#main_page .posts")
 				.html("");
@@ -58,7 +58,7 @@ function new_user() {
 	if (($user_pass != "") && ($user_re_pass != "") && ($user_pass == $user_re_pass)) {
 		$('.preloader')
 			.fadeIn();
-		var url = "https://janatech.sa/api/?new_user=true&user_email=" + $user_email + "&user_pass=" + $user_pass + "&user_mobile=" + $user_mobile + "&user_token=" + localStorage.token;
+		var url = "https://hasangad.com/support/api/?new_user=true&user_email=" + $user_email + "&user_pass=" + $user_pass + "&user_mobile=" + $user_mobile + "&user_token=" + localStorage.token;
 		console.log(url);
 		$.getJSON(url, function(new_user) {
 			console.log(new_user);
@@ -97,7 +97,7 @@ $(document)
 				console.log("[" + index + "]: " + fav.id);
 			});
 			//localStorage.checked_tickets =+ $t_id; alert($t_id);
-			var url = "https://janatech.sa/api/?Ticket_id=" + $t_id;
+			var url = "https://hasangad.com/support/api/?Ticket_id=" + $t_id;
 			//alert(url);
 			$.getJSON(url, function(tick) {
 				//alert("test"); console.log(result);
@@ -130,7 +130,7 @@ $(document)
 /*------------------- End of query show ---------------------*/
 function get_branchs(storedID) {
 	var dataBranchs = "get_branchs=true&user=" + storedID;
-	var url_user_branch = "https://janatech.sa/api/?" + dataBranchs;
+	var url_user_branch = "https://hasangad.com/support/api/?" + dataBranchs;
 	console.log(url_user_branch);
 	$.getJSON(url_user_branch, function(u_branch) {
 		console.log(u_branch);
@@ -161,7 +161,7 @@ function get_branch_products($branch_is) {
 			"opacity": "0.92"
 		});
 	var dataProducts = "get_branch_products=true&user=" + $storedID + "&br_name=" + $branch_is;
-	var url_com_prdct = "https://janatech.sa/api/?" + dataProducts;
+	var url_com_prdct = "https://hasangad.com/support/api/?" + dataProducts;
 	console.log(url_com_prdct);
 	$.getJSON(url_com_prdct, function(u_b_prdct) {
 		console.log(u_b_prdct);
@@ -178,7 +178,7 @@ function get_branch_products($branch_is) {
 /*// Get Products */
 function get_user_prdcts(storedID) {
 	var dataProducts = "get_products=true&user=" + storedID;
-	var url_user_prdct = "https://janatech.sa/api/?" + dataProducts;
+	var url_user_prdct = "https://hasangad.com/support/api/?" + dataProducts;
 	console.log(url_user_prdct);
 	$.getJSON(url_user_prdct, function(u_prdct) {
 		console.log(u_prdct);
@@ -200,7 +200,7 @@ function new_branch() {
 		.val();
 	$('.preloader')
 		.fadeIn();
-	var url = "https://janatech.sa/api/?add_branch=true&user_name=" + $author_username + "&pass_is=" + $author_pass + "&author_id=" + $author_id + "&br_name=" + $br_name;
+	var url = "https://hasangad.com/support/api/?add_branch=true&user_name=" + $author_username + "&pass_is=" + $author_pass + "&author_id=" + $author_id + "&br_name=" + $br_name;
 	//console.log(url);
 	$.getJSON(url, function(add_branch) {
 		console.log(add_branch);
@@ -215,7 +215,7 @@ function new_branch() {
 /*// Get Tickets*/
 function get_user_tickets(storedID) {
 	var dataTickets = "get_tickets=true&user=" + storedID;
-	var url_user_tickets = "https://janatech.sa/api/?" + dataTickets;
+	var url_user_tickets = "https://hasangad.com/support/api/?" + dataTickets;
 	$.getJSON(url_user_tickets, function(u_ticks) {
 		//alert('get_products');
 		console.log(u_ticks);
@@ -240,7 +240,7 @@ function new_product() {
 		.val();
 	$('.preloader')
 		.fadeIn();
-	var url = "https://janatech.sa/api/?add_product=true&user_name=" + $author_username + "&pass_is=" + $author_pass + "&author_id=" + $author_id + "&prd_model=" + $prd_model + "&pr_sn=" + $pr_sn + "&b_date=" + $b_date + "&branch=" + $branch_name;
+	var url = "https://hasangad.com/support/api/?add_product=true&user_name=" + $author_username + "&pass_is=" + $author_pass + "&author_id=" + $author_id + "&prd_model=" + $prd_model + "&pr_sn=" + $pr_sn + "&b_date=" + $b_date + "&branch=" + $branch_name;
 	console.log(url);
 	$.getJSON(url, function(add_product) {
 		//console.log(add_product);
@@ -273,7 +273,7 @@ function new_ticket() {
 		.val();
 	$('.preloader')
 		.fadeIn();
-	var url = "https://janatech.sa/api/?add_ticket=true&user_name=" + $author_username + "&pass_is=" + $author_pass + "&author_id=" + $author_id + "&prd_model=" + $prd_model + "&pr_sn=" + $pr_sn + "&b_date=" + $b_date + "&u_address=" + $u_address + "&u_notes=" + $u_notes + "&t_branch=" + $t_branch;
+	var url = "https://hasangad.com/support/api/?add_ticket=true&user_name=" + $author_username + "&pass_is=" + $author_pass + "&author_id=" + $author_id + "&prd_model=" + $prd_model + "&pr_sn=" + $pr_sn + "&b_date=" + $b_date + "&u_address=" + $u_address + "&u_notes=" + $u_notes + "&t_branch=" + $t_branch;
 	//console.log(url);
 	$.getJSON(url, function(add_ticket) {
 		console.log(add_ticket);
@@ -302,7 +302,7 @@ function new_comment() {
 		.val();
 	$('.preloader')
 		.fadeIn();
-	var url = "https://janatech.sa/api/?add_comment=true&user_name=" + $author_username + "&pass_is=" + $author_pass + "&author_id=" + $author_id + "&u_comment=" + $u_comment + "&t_id=" + $t_id;
+	var url = "https://hasangad.com/support/api/?add_comment=true&user_name=" + $author_username + "&pass_is=" + $author_pass + "&author_id=" + $author_id + "&u_comment=" + $u_comment + "&t_id=" + $t_id;
 	console.log(url);
 	$.getJSON(url, function(add_comment) {
 		//console.log(add_comment);
@@ -335,7 +335,7 @@ function order_pr() {
 		.val();
 	$('.preloader')
 		.fadeIn();
-	var url = "https://janatech.sa/api/?order_pr=true&user_name=" + $author_username + "&u_name_order=" + $u_name_order + "&u_address_order=" + $u_address_order + "&pass_is=" + $author_pass + "&author_id=" + $author_id + "&u_notes_order=" + $u_notes_order + "&pr_model_order=" + $pr_model_order + "&u_mobile_order=" + $u_mobile_order + "&u_email_order=" + $u_email_order;
+	var url = "https://hasangad.com/support/api/?order_pr=true&user_name=" + $author_username + "&u_name_order=" + $u_name_order + "&u_address_order=" + $u_address_order + "&pass_is=" + $author_pass + "&author_id=" + $author_id + "&u_notes_order=" + $u_notes_order + "&pr_model_order=" + $pr_model_order + "&u_mobile_order=" + $u_mobile_order + "&u_email_order=" + $u_email_order;
 	console.log(url);
 	$.getJSON(url, function(order_pr_now) {
 		console.log(order_pr_now);
@@ -399,6 +399,11 @@ $('.add_ticket')
 				"opacity": "0.92"
 			});
 	});
+
+function pad(str, max) {
+	str = str.toString();
+	return str.length < max ? pad("0" + str, max) : str;
+}
 $(document)
 	.ready(function() {
 		/*Check of user logged in before and stored by webstorage*/
@@ -430,16 +435,17 @@ $(document)
 				get_user_tickets($storedID);
 				$(".company")
 					.hide();
-			}
-			if ($storedAccType == "company") {
+			} else if ($storedAccType == "company") {
 				get_branchs($storedID);
 				get_user_tickets($storedID);
 				$(".personal")
 					.hide();
+			} else {
+				get_user_tickets($storedID);
 			}
 		}
 		/*///////////////// Get Slides /////////////////////////*/
-		var url = "https://janatech.sa/api/?slides_is=show";
+		var url = "https://hasangad.com/support/api/?slides_is=show";
 		//alert(url);
 		$(".favs table tbody")
 			.html("");
@@ -476,7 +482,7 @@ $(document)
 				if ($new_favs !== null) {
 					$.each($new_favs, function(i, fav) {
 						//alert(fav);
-						var url = "https://janatech.sa/api/?Ticket_id=" + fav;
+						var url = "https://hasangad.com/support/api/?Ticket_id=" + fav;
 						//alert(url);
 						$(".favs table tbody")
 							.html("");
@@ -501,25 +507,28 @@ $(document)
 				.val();
 			//alert(user); var dataString = "user=" + user + "&pass=" + pass + "&login=";
 			var dataString = "user=" + user + "&pass=" + pass;
-			var url2 = "https://janatech.sa/api/?" + dataString;
+			var url2 = "https://hasangad.com/support/api/?" + dataString;
 			//console.log(url2);
 			$.getJSON(url2, function(login) {
 				$login_status = login.status;
 				$u_id = login.u_id;
 				$acc_type = login.acc_type;
-				if ($acc_type == "personal") {
+				/*if ($acc_type == "personal") {
 					get_user_prdcts($storedID);
 					get_user_tickets($storedID);
 					$(".company")
 						.hide();
-				}
-				if ($acc_type == "company") {
+				} else if ($acc_type == "company") {
 					get_branchs($storedID);
 					get_user_tickets($storedID);
 					$(".personal")
 						.hide();
-				}
+				} else {
+					// do :
+					get_user_tickets($storedID);
+				}*/
 				if ($login_status == true) {
+					get_user_tickets($storedID);
 					// REFRENCE : https://www.w3schools.com/html/html5_webstorage.asp https://www.w3schools.com/jsref/prop_win_localstorage.asp
 					localStorage.login_is = user;
 					localStorage.pass_is = pass;
@@ -539,14 +548,14 @@ $(document)
 					//alert($u_id);
 					$('.slide')
 						.hide();
-					if ($acc_type == "personal") {
-						get_user_prdcts($u_id);
-						get_user_tickets($u_id);
-					}
-					if ($acc_type == "company") {
-						get_branchs($u_id);
-						get_user_tickets($u_id);
-					}
+					/*	if ($acc_type == "personal") {
+							get_user_prdcts($u_id);
+							get_user_tickets($u_id);
+						}
+						if ($acc_type == "company") {
+							get_branchs($u_id);
+							get_user_tickets($u_id);
+						}*/
 					$(".logged_in")
 						.fadeIn("1000");
 					//$(".login_success").fadeOut("3000");
