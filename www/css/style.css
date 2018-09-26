@@ -368,6 +368,7 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
   background: #fff;
   padding: 0px 5px;
   border-radius: 2px;
+  z-index: 99999999999;
 }
 
 .MenuBurger i {
