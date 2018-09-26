@@ -1,5 +1,5 @@
 /*body { background:#f8f8f8 url(images/logo-2.jpg) top center no-repeat; padding-top:120px; background-size:contain; }*/
-@import url(https: //fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+@import url("http://fonts.googleapis.com/earlyaccess/droidarabickufi.css");
 
 h1, h2, h3, h4, h5, h6, a {
   font-family: "Droid Arabic Kufi", tahoma;
@@ -40,6 +40,10 @@ body {
   padding: 0;
   padding-top: constant(safe-area-inset-top); //for iOS 11.2
   padding-top: env(safe-area-inset-top); //for iOS 11.1
+}
+
+.authors_table a {
+  font-weight: 400
 }
 
 .ticket_link {
@@ -258,11 +262,20 @@ form a, .login_form a, .check_ticket_by_number a {
 }
 
 /*---End of rtl jquery mobile ---*/
-table, th, td {
+/*table, th, td {
   border: 1px solid #cccccc !important;
-}
-
+}*/
 body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {}
+
+.u_comment {
+  border: 1px dashed #FF9800 !important;
+  border-radius: 5px !important;
+  margin-top: 15px;
+  background: #fff5e6;
+  box-shadow: inset #ffbd54 3px 3px 15px 0px;
+  font-size: 1.5em;
+  color: #946416;
+}
 
 .cars_list {
   display: block;
@@ -287,9 +300,9 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
 
 .header {
   background-color: #FFBD54 !important;
-  height: 1%;
+  height: 10%;
   margin-bottom: 50px;
-  z-index: 9999999;
+  z-index: 999999;
   position: fixed;
   left: 0;
   right: 0;
@@ -373,10 +386,22 @@ body {
 }
 
 .logo {
-  max-width: 25%;
-  display: block;
-  margin: -22px -26px;
+  max-width: 20%;
+  float: right;
+  margin: -5px -5px;
   text-align: center;
+}
+
+.login_success {
+  float: right;
+  width: 62%;
+  padding: 5px;
+  font-weight: 700;
+  background: #d89934;
+  border-radius: 2px;
+  margin-top: 6%;
+  margin-right: 10px;
+  color: #ffffff;
 }
 
 .post_area {

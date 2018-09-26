@@ -20,6 +20,9 @@
       <!-- Start page header -->
       <div data-role="header" data-position="fixed" class="header">
         <img src="images/logo.png" alt="" title="" width="" height="" class="logo">
+        <div class="login_success" style="display:none">
+          تم تسجيل دخولك بنجاح
+        </div>
         <a id="show_menu" onclick="show_menu()" class="MenuBurger">
           <i class="fa fa-bars"></i>
         </a>
@@ -36,9 +39,6 @@
     </div>
     <!-- /panel - End page menu -->
     <div role="main" class="ui-content main col-xs-12">
-      <div class="alert alert-success login_success" style="display:none">
-        تم تسجيل دخولك بنجاح
-      </div>
       <div class="login_form page">
         <input type="text" class="form-control user" name="user" placeholder="اسم المستخدم" value="" pattern="[a-z]{5,10}" required="required" autofocus="autofocus">
         <input type="password" class="form-control pass" name="pass" placeholder="كلمة المرور" value="" required="required">
@@ -75,7 +75,7 @@
             <table class="authors_table table table-bordered table-striped">
               <thead>
                 <tr>
-                  <th>رقم التذكرة</th>
+                  <!--<th>رقم التذكرة</th>-->
                   <th>اسم التذكرة</th>
                   <th>حالة التذكرة</th>
                   <!--<th>درجة الأهمية</th> <th>تاريخ الإنشاء </th> <th>قسم</th>-->

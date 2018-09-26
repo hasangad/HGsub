@@ -6,7 +6,7 @@ function pad(str, max) {
 
 function notify(T_id_is) {
 	//console.log(T_id_is); debugger; alert("clicked"); $(".ticket_link").on("click", notify); alert('test');
-	alert(T_id_is);
+	//alert(T_id_is);
 	//$fav_is = pad(T_id_is, 9);
 	$fav_is = T_id_is;
 	//alert($fav_is);
@@ -19,11 +19,10 @@ function notify(T_id_is) {
 			$("#main_page .posts")
 				.html("");
 			$("#main_page .posts")
-				.append("رقم طلب الصيانة <b>" + $t_id + "</b>");
+				.append('<div class="col-xs-12 no-padding"><h2>' + tick['ticket'].title + '</h2><span class="btn btn-warning col-xs-12">حالة التذكرة : ' + tick['ticket'].status + '</span></div><br />');
+			//$("#main_page .posts").append("التذكرة <b>" + $t_id + "</b>");
 			$("#main_page .posts")
-				.append('<div class="col-xs-12"><textarea class="u_comment form-control"></textarea><input type="hidden" class="t_id2" value="' + $t_id + '" /><button class="btn btn-success add_comment">أرسل رد</button></div>');
-			$("#main_page .posts")
-				.append('<div class="col-xs-12"><h2>' + tick['ticket'].title + '</h2><span class="btn btn-warning">' + tick['ticket'].status + '</span></div>');
+				.append('<div class="col-xs-12 no-padding"><textarea class="u_comment form-control"></textarea><input type="hidden" class="t_id2" value="' + $t_id + '" /><button class="btn btn-primary col-xs-12 add_comment">أرسل رد <i class="fa fa-paper-plane"></i></button></div>');
 			$.each(tick['comment'], function(i, comment) {
 				$("#main_page .posts")
 					.append('<div class="col-xs-12 comment"><h2>' + comment.c_date + '</h2><p>' + comment.content + '</p></div>');
@@ -216,11 +215,11 @@ function get_user_prdcts(storedID) {
 	console.log(url_user_prdct);
 	$.getJSON(url_user_prdct, function(u_prdct) {
 		console.log(u_prdct);
-		$(".logged_in .products .table-responsive")
+		$(".logged_in .products .table-responsive tbody")
 			.html("");
 		$.each(u_prdct, function(i, tr) {
 			//alert(tr.pr_sn);
-			$(".logged_in .products .table-responsive")
+			$(".logged_in .products .table-responsive tbody")
 				.append('<table class="table table-striped"><tr><td>product</td><td>' + tr.c_product + '</td></tr><tr><td>Serial No.</td><td>' + tr.pr_sn + '</td></tr><tr><td>Buy Date</td><td>' + tr.b_date + '</td></tr><table>');
 		});
 	});
@@ -253,10 +252,10 @@ function get_user_tickets(storedID) {
 	$.getJSON(url_user_tickets, function(u_ticks) {
 		//alert('get_products');
 		console.log(u_ticks);
-		$(".logged_in .tickets table")
+		$(".logged_in .tickets table tbody")
 			.html("");
 		$.each(u_ticks, function(i, tr) {
-			$(".logged_in .tickets table")
+			$(".logged_in .tickets table tbody")
 				.append('<tr>' + tr.tr + '</tr>');
 		});
 	});
@@ -530,43 +529,33 @@ $(document)
 		}
 
 		function do_login() {
-			$("#login")
-				.html('جار التحقق ...');
 			var user = $(".user")
 				.val();
-			/*--- convert letters to lower case ----*/
-			user = user.toLowerCase();
 			var pass = $(".pass")
 				.val();
-			//alert(user); var dataString = "user=" + user + "&pass=" + pass + "&login=";
-			var dataString = "user=" + user + "&pass=" + pass;
+			//var MobileToken = localStorage.MobileToken;
+			var MobileToken = localStorage.MobileToken;
+			//alert(MobileToken);
+			//alert(user);
+			//var dataString = "user=" + user + "&pass=" + pass + "&login=";
+			var dataString = "user=" + user + "&pass=" + pass + "&UpdateMobileToken=" + MobileToken;
 			var url2 = "https://hasangad.com/support/api/?" + dataString;
-			//console.log(url2);
+			//debugger;
 			$.getJSON(url2, function(login) {
+				//debugger;
+				//alert("test");
+				console.log(login);
 				$login_status = login.status;
+				$MobileTokenDB = login.MobileTokenDB;
+				$MobileTokenStatus = login.MobileTokenStatus;
 				$u_id = login.u_id;
-				$acc_type = login.acc_type;
-				/*if ($acc_type == "personal") {
-					get_user_prdcts($storedID);
-					get_user_tickets($storedID);
-					$(".company")
-						.hide();
-				} else if ($acc_type == "company") {
-					get_branchs($storedID);
-					get_user_tickets($storedID);
-					$(".personal")
-						.hide();
-				} else {
-					// do :
-					get_user_tickets($storedID);
-				}*/
 				if ($login_status == true) {
-					get_user_tickets($storedID);
+					get_user_tickets($u_id);
 					// REFRENCE : https://www.w3schools.com/html/html5_webstorage.asp https://www.w3schools.com/jsref/prop_win_localstorage.asp
 					localStorage.login_is = user;
 					localStorage.pass_is = pass;
 					localStorage.u_id = $u_id;
-					localStorage.acc_type = $acc_type;
+					//localStorage.acc_type = $acc_type;
 					//alert("Login Success");
 					$(".login_form")
 						.stop()
