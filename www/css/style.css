@@ -72,8 +72,8 @@ body {
   display: block;
   background: #ffffff url(../images/splash.jpg) center center no-repeat;
   background-size: 100% 100%;
-  z-index: 99999999;
-  position: absolute;
+  z-index: 999;
+  position: fixed;
   width: 100%;
   left: 0;
   top: 0;
@@ -115,7 +115,7 @@ body {
   left: -80%;
   bottom: 0;
   width: 80%;
-  z-index: 999999;
+  z-index: 997;
   background: rgba(0, 0, 0, 0.85);
   margin-bottom: constant(safe-area-inset-bottom);
   /* iOS 11.0 */
@@ -302,7 +302,7 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
   background-color: #FFBD54 !important;
   height: 10%;
   margin-bottom: 50px;
-  z-index: 999999;
+  z-index: 997;
   position: fixed;
   left: 0;
   right: 0;
@@ -368,7 +368,7 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
   background: #fff;
   padding: 0px 5px;
   border-radius: 2px;
-  z-index: 99999999999;
+  z-index: 998;
 }
 
 .MenuBurger i {
