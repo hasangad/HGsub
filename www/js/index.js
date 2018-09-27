@@ -97,14 +97,14 @@ var app = {
 				var GetNotify = JSON.stringify(data);
 				alert(GetNotify);
 
-				function GetNotify(key, value) {
+				function GetNotify(NotifyKey, NotifyValue) {
 					//console.log(typeof value);
 					if (key === 'click_action') {
 						//return undefined;
-						alert(value);
+						alert(NotifyValue);
 					}
-					alert(value);
-					return value;
+					alert(NotifyValue);
+					return NotifyValue;
 				}
 				/*	for (var i = 0; i < JSON.GetNotify.length; i++) {
 						alert(parsedArray[i].click_action);
@@ -113,8 +113,9 @@ var app = {
 			} else {
 				//Notification was received in foreground(while user explore the app )-( Like facebook Notification Bell ). Maybe the user needs to be notified.
 				alert('Like facebook Notification Bell');
-				var BadgeCount = document.getElementById("BadgeCount");
-				$BadgeCount.html($BadgeCount.html() + 1);
+				$BadgeCount = $("BadgeCount")
+					.html();
+				$BadgeCount.html($BadgeCount + 1);
 			}
 		});
 	}
