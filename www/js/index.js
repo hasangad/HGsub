@@ -110,6 +110,7 @@ var app = {
 						alert(parsedArray[i].click_action);
 					}*/
 				alert('received on device tray and tapped by the user');
+				notify('58N973');
 			} else {
 				//Notification was received in foreground(while user explore the app )-( Like facebook Notification Bell ). Maybe the user needs to be notified.
 				alert('Like facebook Notification Bell');
