@@ -43,11 +43,9 @@ body {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 2%, rgba(255, 245, 232, 1) 100%, rgba(255, 245, 232, 1) 102%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#fff5e8', GradientType=0);
   margin-bottom: constant(safe-area-inset-bottom);
-  /* iOS 11.0 */
   margin-bottom: env(safe-area-inset-bottom);
-  /* iOS 11.2 */
-  padding-top: constant(safe-area-inset-top); //for iOS 11.2
-  padding-top: env(safe-area-inset-top); //for iOS 11.1
+  padding-top: constant(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
 }
 
 .authors_table a {
@@ -304,15 +302,14 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
 
 .header {
   background-color: #FFBD54 !important;
-  height: 10%;
+  height: 15%;
+  padding-top: 8%;
   margin-bottom: 50px;
   z-index: 997;
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
-  padding-top: constant(safe-area-inset-top); //for iOS 11.2
-  padding-top: env(safe-area-inset-top); //for iOS 11.1
 }
 
 #main_page {
@@ -369,12 +366,14 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
 .MenuBurger {
   position: fixed;
   left: 3%;
-  top: 3%;
+  top: 6.3%;
   font-size: 2.5em;
   background: #fff;
   padding: 0px 5px;
   border-radius: 2px;
   z-index: 998;
+  zoom: 0.8;
+  border-radius: 4px;
 }
 
 .MenuBurger i {
@@ -392,14 +391,26 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
   text-align: center;
 }
 
+.NotifyBell {
+  float: right;
+  margin: 3px 1px 0 0;
+  padding: 5px;
+  zoom: 1.3;
+}
+
+.NotifyBell span.badge {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 .login_success {
   float: right;
-  width: 62%;
+  width: 54%;
   padding: 5px;
   font-weight: 700;
   background: #d89934;
   border-radius: 2px;
-  margin-top: 6%;
+  margin-top: 3%;
   margin-right: 10px;
   color: #ffffff;
 }
