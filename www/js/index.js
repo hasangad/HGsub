@@ -102,7 +102,9 @@ var app = {
 				alert('received on device tray and tapped by the user');
 			} else {
 				//Notification was received in foreground(while user explore the app )-( Like facebook Notification Bell ). Maybe the user needs to be notified.
-				alert(JSON.stringify(data));
+				//alert(JSON.stringify(data));
+				var BadgeCount = document.getElementById("BadgeCount");
+				$BadgeCount++;
 			}
 		});
 	}
