@@ -96,15 +96,25 @@ var app = {
 				//alert(JSON.stringify(data));
 				var GetNotify = JSON.stringify(data);
 				alert(GetNotify);
-				for (var i = 0; i < JSON.GetNotify.length; i++) {
-					alert(parsedArray[i].click_action);
+
+				function GetNotify(key, value) {
+					//console.log(typeof value);
+					if (key === 'click_action') {
+						//return undefined;
+						alert(value);
+					}
+					alert(value);
+					return value;
 				}
+				/*	for (var i = 0; i < JSON.GetNotify.length; i++) {
+						alert(parsedArray[i].click_action);
+					}*/
 				alert('received on device tray and tapped by the user');
 			} else {
 				//Notification was received in foreground(while user explore the app )-( Like facebook Notification Bell ). Maybe the user needs to be notified.
-				//alert(JSON.stringify(data));
+				alert('Like facebook Notification Bell');
 				var BadgeCount = document.getElementById("BadgeCount");
-				$BadgeCount++;
+				$BadgeCount.html($BadgeCount.html() + 1);
 			}
 		});
 	}
