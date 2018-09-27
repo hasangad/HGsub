@@ -53,12 +53,17 @@ var app = {
 					.fadeIn(1000);
 			} else {
 				//alert("Connected");
-				$(".skip_to_home")
-					.fadeIn(1000);
+				if (localStorage.login_is) {
+					$(".splash")
+						.hide();
+				} else {
+					$(".skip_to_home")
+						.fadeIn(1000);
+				}
 			}
 			//document.addEventListener("deviceready", onDeviceReady, false);
 			//function onDeviceReady() {
-			console.log(navigator.vibrate);
+			//	console.log(navigator.vibrate);
 			//}
 			// Vibrate for 1 second
 			// Wait for 1 second
@@ -96,16 +101,15 @@ var app = {
 				//alert(JSON.stringify(data));
 				var GetNotify = JSON.stringify(data);
 				alert(GetNotify);
-
-				function GetNotify(NotifyKey, NotifyValue) {
-					//console.log(typeof value);
-					if (key === 'click_action') {
+				//GetNotifyParse  = JSON.parse(GetNotify);
+				JSON.parse(GetNotify, (NotifyKey, NotifyValue) => {
+					if (NotifyKey === 'click_action') {
 						//return undefined;
 						alert(NotifyValue);
 					}
 					alert(NotifyValue);
 					return NotifyValue;
-				}
+				});
 				/*	for (var i = 0; i < JSON.GetNotify.length; i++) {
 						alert(parsedArray[i].click_action);
 					}*/
