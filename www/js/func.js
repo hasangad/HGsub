@@ -438,6 +438,16 @@ $(document)
 		$(".preloader")
 			.fadeOut(500);
 		/*------------------------------------*/
+		$('#NotifyBell')
+			.click(function() {
+				$("#BadgeCount")
+					.text("0");
+				$('.badge')
+					.addClass('badge-dark');
+				$('.badge')
+					.reomveClass('badge-danger');
+			});
+		/*--------------------------------------*/
 		/*Check of user logged in before and stored by webstorage*/
 		$storedName = localStorage.getItem('login_is');
 		$storedPw = localStorage.getItem('pass_is');
@@ -462,6 +472,14 @@ $(document)
 			$(".login_link")
 				.addClass('hidden');
 			//	alert($storedAccType);
+			$("#BadgeCount")
+				.text(localStorage.BadgeCount);
+			if (localStorage.BadgeCount > 0) {
+				$('.badge')
+					.removeClass('badge-dark');
+				$('.badge')
+					.addClass('badge-danger');
+			}
 			if ($storedAccType == "personal") {
 				get_user_prdcts($storedID);
 				get_user_tickets($storedID);

@@ -46,7 +46,7 @@ var app = {
 			states[Connection.CELL_4G] = 'Cell 4G connection';
 			states[Connection.CELL] = 'Cell generic connection';
 			states[Connection.NONE] = 'No network connection';
-			alert('Connection type: ' + states[networkState]);
+			//alert('Connection type: ' + states[networkState]);
 			if (states[networkState] == states[Connection.NONE]) {
 				//alert("أنت غير متصل بالانترنت !");
 				$(".check_interent")
@@ -95,6 +95,7 @@ var app = {
 		});
 		//FCMPlugin.onNotification( onNotificationCallback(data), successCallback(msg), errorCallback(err) )
 		//Here you define your application behaviour based on the notification data.
+		localStorage.BadgeCount = 0;
 		FCMPlugin.onNotification(function(data) {
 			if (data.wasTapped) {
 				//Notification was received on device tray  and tapped by the user.
@@ -117,12 +118,13 @@ var app = {
 				//alert('received on device tray and tapped by the user');
 			} else {
 				//Notification was received in foreground(while user explore the app )-( Like facebook Notification Bell ). Maybe the user needs to be notified.
-				alert('Like facebook Notification Bell');
+				//	alert('Like facebook Notification Bell');
 				$BadgeCount = $("#BadgeCount")
 					.text();
 				//	parseInt :: Convert string to integer
 				$("#BadgeCount")
 					.text(parseInt($BadgeCount) + 1);
+				localStorage.BadgeCount++;
 				$('.badge')
 					.removeClass('badge-dark');
 				$('.badge')
