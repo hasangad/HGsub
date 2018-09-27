@@ -100,25 +100,25 @@ var app = {
 				//Notification was received on device tray  and tapped by the user.
 				//alert(JSON.stringify(data));
 				var GetNotify = JSON.stringify(data);
-				alert(GetNotify);
+				//alert(GetNotify);
 				//GetNotifyParse  = JSON.parse(GetNotify);
 				JSON.parse(GetNotify, (NotifyKey, NotifyValue) => {
-					if (NotifyKey === 'click_action') {
+					if (NotifyKey === 'TicketID') {
 						//return undefined;
-						alert(NotifyValue);
+						//alert(NotifyValue);
+						notify('TicketID');
 					}
-					alert(NotifyValue);
-					return NotifyValue;
+					//alert(NotifyValue);
+					//return NotifyValue;
 				});
 				/*	for (var i = 0; i < JSON.GetNotify.length; i++) {
 						alert(parsedArray[i].click_action);
 					}*/
-				alert('received on device tray and tapped by the user');
-				notify('58N973');
+				//alert('received on device tray and tapped by the user');
 			} else {
 				//Notification was received in foreground(while user explore the app )-( Like facebook Notification Bell ). Maybe the user needs to be notified.
 				alert('Like facebook Notification Bell');
-				$BadgeCount = $("BadgeCount")
+				$BadgeCount = $("#BadgeCount")
 					.html();
 				$BadgeCount.html($BadgeCount + 1);
 			}
