@@ -92,11 +92,11 @@ var app = {
 		//Here you define your application behaviour based on the notification data.
 		FCMPlugin.onNotification(function(data) {
 			if (data.wasTapped) {
-				//Notification was received on device tray and tapped by the user.
-				alert(JSON.stringify(data));
+				//Notification was received on device tray  and tapped by the user.
+				alert(JSON.stringify(data)['click_action']);
 				alert('received on device tray and tapped by the user');
 			} else {
-				//Notification was received in foreground. Maybe the user needs to be notified.
+				//Notification was received in foreground(while user explore the app )-( Like facebook Notification Bell ). Maybe the user needs to be notified.
 				alert(JSON.stringify(data));
 			}
 		});
