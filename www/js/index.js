@@ -106,7 +106,7 @@ var app = {
 					if (NotifyKey === 'TicketID') {
 						//return undefined;
 						//alert(NotifyValue);
-						notify('TicketID');
+						notify(NotifyValue);
 					}
 					//alert(NotifyValue);
 					//return NotifyValue;
@@ -119,8 +119,9 @@ var app = {
 				//Notification was received in foreground(while user explore the app )-( Like facebook Notification Bell ). Maybe the user needs to be notified.
 				alert('Like facebook Notification Bell');
 				$BadgeCount = $("#BadgeCount")
-					.html();
-				$BadgeCount.html($BadgeCount + 1);
+					.text();
+				//	parseInt :: Convert string to integer
+				$BadgeCount.html(parseInt($BadgeCount) + 1);
 			}
 		});
 	}
