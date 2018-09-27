@@ -94,8 +94,9 @@ var app = {
 			if (data.wasTapped) {
 				//Notification was received on device tray  and tapped by the user.
 				//alert(JSON.stringify(data));
-				for (var i = 0; i < JSON.stringify(data)
-					.length; i++) {
+				var GetNotify = JSON.stringify(data);
+				alert(GetNotify);
+				for (var i = 0; i < JSON.GetNotify.length; i++) {
 					alert(parsedArray[i].click_action);
 				}
 				alert('received on device tray and tapped by the user');
