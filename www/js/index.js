@@ -122,6 +122,10 @@ var app = {
 					.text();
 				//	parseInt :: Convert string to integer
 				$BadgeCount.html(parseInt($BadgeCount) + 1);
+				$('.badge')
+					.removeClass('badge-dark');
+				$('.badge')
+					.addClass('badge-danger');
 			}
 		});
 	}
