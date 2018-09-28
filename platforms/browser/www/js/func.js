@@ -41,28 +41,54 @@ var MenuPos = 0;
 function show_menu() {
   //$("#show_menu").click(function() {
   if (MenuPos == 0) {
+
+    $("#show_menu i").removeClass('fa-bars');
+    $("#show_menu i").addClass('fa-arrow-left');
+
     $(".bottom_buttons")
       .animate({
-        "left": "0"
+        "left": "20%"
       });
-    $("#main_page")
-      .animate({
-        "left": "80%"
+    $("#main_page,.logo,.login_success,.NotifyBell")
+      .css({
+        "filter": "blur(13px)"
       });
     MenuPos = 1;
   } else {
+
+    $("#show_menu i").addClass('fa-bars');
+    $("#show_menu i").removeClass('fa-arrow-left');
+
     $(".bottom_buttons")
       .animate({
-        "left": "-80%"
+        "left": "-100%"
       });
-    $("#main_page")
-      .animate({
-        "left": "0%"
+    $("#main_page,.logo,.login_success,.NotifyBell")
+      .css({
+        "filter": "blur(0px)"
       });
     MenuPos = 0;
   }
   //});
 }
+
+
+$('.main_menu a').click(function() {
+
+  $("#show_menu i").addClass('fa-bars');
+  $("#show_menu i").removeClass('fa-arrow-left');
+
+  $(".bottom_buttons")
+    .animate({
+      "left": "-80%"
+    });
+  $("#main_page,.logo,.login_success,.NotifyBell")
+    .css({
+      "filter": "blur(0px)"
+    });
+
+});
+
 var password = document.getElementById("password"),
   confirm_password = document.getElementById("confirm_password");
 
@@ -616,10 +642,10 @@ $(document)
     /*------------ menu clicks -------------------*/
     $(".main_menu a i")
       .click(function() {
-        $(".main_menu a i")
-          .css({
-            "color": "#888888"
-          });
+        /*  $(".main_menu a i")
+            .css({
+              "color": "#888888"
+            });*/
         $(this)
           .css({
             "color": "#FFBD54"

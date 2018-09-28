@@ -1,8 +1,8 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "حسن جاد | دعم العملاء",
-  "short_name": "حسن جاد | دعم العملاء",
+  "name": "Hasan Gad Client Support",
+  "short_name": "Hasan Gad Client Support",
   "version": "com.HasanGadSupportV2",
   "description": "تطبيق متابعة المشاريع والتذاكر الخاص بموقع حسن جاد دوت كوم",
   "author": "Gadency Team",

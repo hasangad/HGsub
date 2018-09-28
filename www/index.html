@@ -18,24 +18,25 @@
     <a class="skip_to_home btn btn-primary" style="display:none">تخطي</a>
     <a class="check_interent btn btn-danger" style="display:none">أنت غير متصل بالانترنت !</a>
   </div>
-  <div data-role="page" id="main_page">
-    <!-- Start page header -->
-    <div data-role="header" data-position="fixed" class="header">
-      <img src="images/logo.png" alt="" title="" width="" height="" class="logo">
-      <div class="login_success" style="display:none">
-        تم تسجيل دخولك بنجاح
-      </div>
-      <div class="NotifyBell">
-        <span class="badge badge-dark">
-          <em id="BadgeCount" class="BadgeCount">0</em>
-          <i class="fa fa-bell"></i>
-        </span>
-      </div>
-      <a id="show_menu" onclick="show_menu()" class="MenuBurger">
-        <i class="fa fa-bars"></i>
-      </a>
+  <!-- Start page header -->
+  <div data-role="header" data-position="fixed" class="header">
+    <img src="images/logo.png" alt="" title="" width="" height="" class="logo">
+    <div class="login_success" style="display:none">
+      تم تسجيل دخولك بنجاح
     </div>
-    <!-- End page header -->
+    <div class="NotifyBell">
+      <span class="badge badge-dark">
+        <em id="BadgeCount" class="BadgeCount">0</em>
+        <i class="fa fa-bell"></i>
+      </span>
+    </div>
+    <a id="show_menu" onclick="show_menu()" class="MenuBurger">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <!-- End page header -->
+  <div data-role="page" id="main_page">
+
     <!-- start page menu -->
     <div data-role="panel" id="menu" data-position="right" data-display="push">
       <!--<div class="ui-panel-inner-top-HG"> </div> <ul data-role="listview"> <li data-icon="home" ><a href="#main_page" >الرئيسية</a></li> <li data-icon="arrow-l" ><a href="#main_page" data-transition="slide" data-direction="reverse"
@@ -49,10 +50,10 @@
       <div class="login_form page">
         <input type="text" class="form-control user" name="user" placeholder="اسم المستخدم" value="" pattern="[a-z]{5,10}" required="required" autofocus="autofocus">
         <input type="password" class="form-control pass" name="pass" placeholder="كلمة المرور" value="" required="required">
-        <button id="login" class="btn btn-primary col-xs-14 col-xs-offset-4">تسجيل الدخول</button>
+        <button id="login" class="btn btn-primary col-xs-4 col-xs-offset-4">تسجيل الدخول</button>
       </div>
       <div class="check_ticket_by_number page" style="display:none"><input type="number" class="form-control t_id" placeholder="اكتب هنا رقم التذكرة" value="" required="required">
-        <button class="col-xs-12 btn btn-success t_show">عرض التذكرة</button>
+        <button class="btn btn-sm btn-primary t_show col-xs-4 col-xs-offset-4 ">عرض التذكرة</button>
       </div>
       <div role="main" class="col-xs-12 about page" style="display:none">
         <h1>عن تطبيق دعم عملاء حسن جاد
@@ -66,7 +67,7 @@
       </div>
       <!-- End of POSTS / UI CONTENT -->
       <!-- Start of favs -->
-      <div class="favs container-fluid" style="display:none">
+      <div class="favs container-fluid page" style="display:none">
         <h2 class="h2">زيارات سابقة History</h2>
         <div class="table-responsive">
           <table class="table table-striped">
@@ -77,7 +78,7 @@
       <!-- End of favs -->
       <!-- start of loggedin user -->
       <div class="logged_in container-fluid no-padding" style="display:none">
-        <div class="tickets">
+        <div class="tickets page">
           <div class="table-responsive">
             <table class="authors_table table table-bordered table-striped">
               <thead>
@@ -133,12 +134,15 @@
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
   <div class="main_menu bottom_buttons">
-    <a href="index.html" class="active">
+    <a href="index.html" class="active btn btn-primary">
       <i class="fa fa-home"></i>
       <span>الرئيسية</span></a>
-    <!--<a class="login_link"> <i class="fa fa-lock"></i> <span>تسجيل الدخول</span></a> <a class="search_link"> <i class="fa fa-search"></i> <span>الإستعلام برقم التذكرة</span></a> <a class="show_favorites"> <i class="fa fa-star"></i>
-      <span>المفضلة</span></a> <a class="show_about"> <i class="fa fa-info"></i> <span>عن التطبيق</span></a>-->
-    <a id="logout" class="hidden">
+    <!--<a class="login_link"> <i class="fa fa-lock"></i> <span>تسجيل الدخول</span></a>-->
+    <a class="search_link  btn btn-primary"> <i class="fa fa-search"></i> <span>الإستعلام برقم التذكرة</span></a>
+    <a class="show_favorites  btn btn-primary"> <i class="fa fa-star"></i>
+      <span>المفضلة</span></a>
+    <a class="show_about  btn btn-primary"> <i class="fa fa-info"></i> <span>عن التطبيق</span></a>
+    <a id="logout" class="hidden btn btn-danger">
       <i class="fa fa-power-off"></i>
       <span>خروج</span>
     </a>
