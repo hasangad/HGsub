@@ -1,0 +1,67 @@
+{
+  "_from": "cordova-plugin-fcm-push",
+  "_id": "cordova-plugin-fcm-push@0.0.4",
+  "_inBundle": false,
+  "_integrity": "sha512-GY4Qe4ZpiIZ/h952grN/R+qWFZjMS/KiZe8eQju9bdmyR3Ki47GAVWcH+SAifGnvSIu6mOAIpvtmRaPe+lon9Q==",
+  "_location": "/cordova-plugin-fcm-push",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-fcm-push",
+    "name": "cordova-plugin-fcm-push",
+    "escapedName": "cordova-plugin-fcm-push",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-fcm-push/-/cordova-plugin-fcm-push-0.0.4.tgz",
+  "_shasum": "24146c141b4c1bff13fd98c9639e831e6a3357dd",
+  "_spec": "cordova-plugin-fcm-push",
+  "_where": "C:\\Users\\hasangad\\Documents\\GitHub\\HGapps\\HGsub",
+  "authors": [
+    {
+      "name": "Rehan Manzoor",
+      "email": "rehan_manzoor@outlook.com"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/rummykhan/cordova-plugin-fcm/issues"
+  },
+  "bundleDependencies": false,
+  "cordova_name": "Cordova FCM Push Plugin",
+  "deprecated": false,
+  "description": "Google Firebase Cloud Messaging Cordova Push Plugin",
+  "engines": [],
+  "englishdoc": "",
+  "homepage": "https://github.com/rummykhan/cordova-plugin-fcm#readme",
+  "issue": "",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "notifications",
+    "push",
+    "firebase",
+    "fcm",
+    "ios",
+    "android",
+    "cordova"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-fcm-push",
+  "platforms": [
+    "android",
+    "ios"
+  ],
+  "repo": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rummykhan/cordova-plugin-fcm.git"
+  },
+  "version": "0.0.4"
+}

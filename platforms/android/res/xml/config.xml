@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.HasanGadSupportV2" version="1.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="FCMPlugin">
+        <param name="android-package" value="com.gae.scaffolder.plugin.FCMPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+    </feature>
+    <feature name="StatusBar">
+        <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <name>
+    حسن جاد | دعم العملاء
+  </name>
+    <description>
+    تطبيق متابعة المشاريع والتذاكر الخاص بموقع حسن جاد دوت كوم
+  </description>
+    <author email="hasangad.com@gmail.com" href="http://HasanGad.com/blog">
+    Gadency Team
+  </author>
+    <icon src="www/icon.png" />
+    <icon gap:platform="android" src="www/icon.png" />
+    <icon gap:platform="ios" height="29" src="www/res/icon/ios/icon-29.png" width="29" />
+    <icon gap:platform="ios" height="40" src="www/res/icon/ios/icon-40.png" width="40" />
+    <icon gap:platform="ios" height="57" src="www/res/icon/ios/icon-57.png" width="57" />
+    <icon gap:platform="ios" height="58" src="www/res/icon/ios/icon-58.png" width="58" />
+    <icon gap:platform="ios" height="72" src="www/res/icon/ios/icon-72.png" width="72" />
+    <icon gap:platform="ios" height="80" src="www/res/icon/ios/icon-80.png" width="80" />
+    <icon gap:platform="ios" height="87" src="www/res/icon/ios/icon-87.png" width="87" />
+    <icon gap:platform="ios" height="114" src="www/res/icon/ios/icon-57-2x.png" width="114" />
+    <icon gap:platform="ios" height="144" src="www/res/icon/ios/icon-72-2x.png" width="144" />
+    <icon gap:platform="ios" height="120" src="www/res/icon/ios/icon-120.png" width="120" />
+    <icon gap:platform="ios" height="76" src="www/res/icon/ios/icon-76.png" width="76" />
+    <icon gap:platform="ios" height="152" src="www/res/icon/ios/icon-152.png" width="152" />
+    <icon gap:platform="ios" height="167" src="www/res/icon/ios/icon-152.png" width="167" />
+    <icon gap:platform="ios" height="180" src="www/res/icon/ios/icon-152.png" width="180" />
+    <icon gap:platform="ios" height="167" src="www/res/icon/ios/icon-167.png" width="167" />
+    <icon gap:platform="ios" height="512" src="www/res/icon/ios/icon-512.png" width="512" />
+    <icon gap:platform="ios" height="1024" src="www/res/icon/ios/icon-1024.png" width="1024" />
+    <gap:config-file parent="CFBundleShortVersionString" platform="ios">
+        <string>100</string>
+    </gap:config-file>
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <splash qualifier="ldpi" src="www/images/splash.png" />
+    <splash qualifier="mdpi" src="www/images/splash.png" />
+    <splash qualifier="hdpi" src="www/images/splash.png" />
+    <splash qualifier="xhdpi" src="www/images/splash.png" />
+    <splash qualifier="fr-xhdpi" src="www/images/splash.png" />
+    <splash qualifier="port-xxhdpi" src="www/images/splash.png" />
+    <splash qualifier="land-xxhdpi" src="www/images/splash.png" />
+    <allow-intent href="market:*" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="BackgroundColor" value="#ffffff" />
+    <preference name="fullscreen" value="true" />
+    <preference name="StatusBarOverlaysWebView" value="true" />
+    <preference name="phonegap-version" value="cli-7.1.0" />
+    <preference name="pgb-builder-version" value="2" />
+    <preference name="permissions" value="none" />
+    <preference name="orientation" value="portrait" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="target-device" value="universal" />
+    <preference name="webviewbounce" value="true" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="stay-in-webview" value="false" />
+    <preference name="detect-data-types" value="true" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="disable-cursor" value="false" />
+    <preference name="android-installLocation" value="auto" />
+    <preference name="StatusBarBackgroundColor" value="#ffbb55" />
+    <preference name="SplashScreen" value="screen" />
+</widget>
