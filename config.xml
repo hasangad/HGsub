@@ -73,8 +73,6 @@
         <allow-intent href="itms-apps:*" />
         <splash src="www/res/screen/ios/Default@2x~universal~anyany.png" />
         <plugin name="cordova-plugin-splashscreen" spec="^4.0.3" />
-        <plugin spec="cordova-plugin-fcm-push" />
-        <plugin spec="https://github.com/HGapps/cordova-plugin-fcm-config" />
     </platform>
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -86,6 +84,8 @@
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
+    <plugin spec="https://github.com/HGapps/cordova-plugin-fcm" />
+    <plugin spec="https://github.com/HGapps/cordova-plugin-fcm-config" />
     <engine name="browser" spec="~5.0.4" />
     <engine name="android" spec="~6.3.0" />
 </widget>
