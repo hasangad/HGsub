@@ -1,0 +1,39 @@
+{
+  "_from": "git+https://github.com/HGapps/cordova-plugin-fcm-config.git",
+  "_id": "cordova-plugin-fcm-config@1.0.0",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/cordova-plugin-fcm-config",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/HGapps/cordova-plugin-fcm-config",
+    "rawSpec": "https://github.com/HGapps/cordova-plugin-fcm-config",
+    "saveSpec": "git+https://github.com/HGapps/cordova-plugin-fcm-config.git",
+    "fetchSpec": "https://github.com/HGapps/cordova-plugin-fcm-config.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/HGapps/cordova-plugin-fcm-config.git#dad4877d36ede92fed6d63954fd1aac3c324d5d8",
+  "_spec": "https://github.com/HGapps/cordova-plugin-fcm-config",
+  "_where": "C:\\Users\\hasangad\\documents\\github\\HGapps\\HGsup-Pro\\HGsub",
+  "author": {
+    "name": "Steffen Tröster"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "This plugin copies the required fcm configurations in the project folder",
+  "license": "MIT",
+  "name": "cordova-plugin-fcm-config",
+  "platforms": [
+    "android",
+    "ios"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}

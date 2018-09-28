@@ -1,0 +1,109 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "حسن جاد | دعم العملاء",
+  "short_name": "حسن جاد | دعم العملاء",
+  "version": "com.HasanGadSupportV2",
+  "description": "تطبيق متابعة المشاريع والتذاكر الخاص بموقع حسن جاد دوت كوم",
+  "author": "Gadency Team",
+  "icons": [
+    {
+      "src": "www/icon.png",
+      "type": "image/png",
+      "sizes": "undefinedxundefined"
+    },
+    {
+      "src": "www/icon.png",
+      "type": "image/png",
+      "sizes": "undefinedxundefined"
+    },
+    {
+      "src": "www/res/icon/ios/icon-29.png",
+      "type": "image/png",
+      "sizes": "29x29"
+    },
+    {
+      "src": "www/res/icon/ios/icon-40.png",
+      "type": "image/png",
+      "sizes": "40x40"
+    },
+    {
+      "src": "www/res/icon/ios/icon-57.png",
+      "type": "image/png",
+      "sizes": "57x57"
+    },
+    {
+      "src": "www/res/icon/ios/icon-58.png",
+      "type": "image/png",
+      "sizes": "58x58"
+    },
+    {
+      "src": "www/res/icon/ios/icon-72.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "www/res/icon/ios/icon-80.png",
+      "type": "image/png",
+      "sizes": "80x80"
+    },
+    {
+      "src": "www/res/icon/ios/icon-87.png",
+      "type": "image/png",
+      "sizes": "87x87"
+    },
+    {
+      "src": "www/res/icon/ios/icon-57-2x.png",
+      "type": "image/png",
+      "sizes": "114x114"
+    },
+    {
+      "src": "www/res/icon/ios/icon-72-2x.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "www/res/icon/ios/icon-120.png",
+      "type": "image/png",
+      "sizes": "120x120"
+    },
+    {
+      "src": "www/res/icon/ios/icon-76.png",
+      "type": "image/png",
+      "sizes": "76x76"
+    },
+    {
+      "src": "www/res/icon/ios/icon-152.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "www/res/icon/ios/icon-152.png",
+      "type": "image/png",
+      "sizes": "167x167"
+    },
+    {
+      "src": "www/res/icon/ios/icon-152.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    },
+    {
+      "src": "www/res/icon/ios/icon-167.png",
+      "type": "image/png",
+      "sizes": "167x167"
+    },
+    {
+      "src": "www/res/icon/ios/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "www/res/icon/ios/icon-1024.png",
+      "type": "image/png",
+      "sizes": "1024x1024"
+    }
+  ],
+  "orientation": "portrait",
+  "start_url": "index.html",
+  "theme_color": "#ffbb55"
+}
