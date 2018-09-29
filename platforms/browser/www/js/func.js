@@ -51,7 +51,7 @@ function show_menu() {
       });
     $("#main_page,.logo,.login_success,.NotifyBell")
       .css({
-        "filter": "blur(13px)"
+        "filter": "blur(7px)"
       });
     MenuPos = 1;
   } else {
