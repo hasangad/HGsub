@@ -44,28 +44,7 @@ p {
 body {
   margin: 0;
   padding: 0;
-  background: -moz-linear-gradient(
-    top,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0) 2%,
-    rgba(255, 245, 232, 1) 100%,
-    rgba(255, 245, 232, 1) 102%
-  );
-  background: -webkit-linear-gradient(
-    top,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0) 2%,
-    rgba(255, 245, 232, 1) 100%,
-    rgba(255, 245, 232, 1) 102%
-  );
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0) 2%,
-    rgba(255, 245, 232, 1) 100%,
-    rgba(255, 245, 232, 1) 102%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#fff5e8', GradientType=0);
+  background: #ffffff;
   margin-bottom: constant(safe-area-inset-bottom);
   margin-bottom: env(safe-area-inset-bottom);
   padding-top: constant(safe-area-inset-top);

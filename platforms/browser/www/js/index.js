@@ -117,6 +117,12 @@ var app = {
 					}*/
 				//alert('received on device tray and tapped by the user');
 			} else {
+				JSON.parse(GetNotify, (NotifyKey, NotifyValue) => {
+					if (NotifyKey === 'TicketID') {
+						$('.NotifyBellMenu')
+							.append("<a onclick='" + notify(NotifyValue) + "'>تنبيه جديد للتذكرة رقم " + NotifyValue + "</a>");;
+					}
+				});
 				//Notification was received in foreground(while user explore the app )-( Like facebook Notification Bell ). Maybe the user needs to be notified.
 				//	alert('Like facebook Notification Bell');
 				$BadgeCount = $("#BadgeCount")

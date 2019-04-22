@@ -68,6 +68,30 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/cordova-plugin-vibration/src/browser/Vibration.js",
+        "id": "cordova-plugin-vibration.Vibration",
+        "pluginId": "cordova-plugin-vibration",
+        "merges": [
+            "navigator"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-vibration/www/vibration.js",
+        "id": "cordova-plugin-vibration.notification",
+        "pluginId": "cordova-plugin-vibration",
+        "merges": [
+            "navigator"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-fcm/www/FCMPlugin.js",
+        "id": "cordova-plugin-fcm.FCMPlugin",
+        "pluginId": "cordova-plugin-fcm",
+        "clobbers": [
+            "FCMPlugin"
+        ]
+    },
+    {
         "file": "plugins/cordova-plugin-fcm/www/FCMPlugin.js",
         "id": "cordova-plugin-fcm.FCMPlugin",
         "pluginId": "cordova-plugin-fcm",
@@ -82,8 +106,8 @@ module.exports.metadata =
     "cordova-plugin-device": "2.0.2",
     "cordova-plugin-network-information": "2.0.1",
     "cordova-plugin-statusbar": "2.4.2",
-    "cordova-plugin-vibration": "3.1.0",
     "cordova-plugin-whitelist": "1.3.3",
+    "cordova-plugin-vibration": "3.1.0",
     "cordova-plugin-fcm": "2.1.2",
     "cordova-plugin-fcm-config": "1.0.0"
 }

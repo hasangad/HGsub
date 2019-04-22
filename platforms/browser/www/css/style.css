@@ -1,9 +1,15 @@
 /*body { background:#f8f8f8 url(images/logo-2.jpg) top center no-repeat; padding-top:120px; background-size:contain; }*/
 @import url("http://fonts.googleapis.com/earlyaccess/droidarabickufi.css");
 
-h1, h2, h3, h4, h5, h6, a {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
   font-family: "Droid Arabic Kufi", tahoma;
-  font-weight: 700
+  font-weight: 700;
 }
 
 h1 {
@@ -11,57 +17,79 @@ h1 {
 }
 
 h2 {
-  font-size: large
+  font-size: large;
 }
 
 h3 {
-  font-size: medium
+  font-size: medium;
 }
 
 h4 {
-  font-size: medium
+  font-size: medium;
 }
 
 h5 {
-  font-size: small
+  font-size: small;
 }
 
 h6 {
-  font-size: smaller
+  font-size: smaller;
 }
 
 p {
   font-family: "Droid Arabic Naskh", tahoma;
-  font-size: small
+  font-size: small;
 }
 
 body {
   margin: 0;
   padding: 0;
-  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 2%, rgba(255, 245, 232, 1) 100%, rgba(255, 245, 232, 1) 102%);
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 2%, rgba(255, 245, 232, 1) 100%, rgba(255, 245, 232, 1) 102%);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 2%, rgba(255, 245, 232, 1) 100%, rgba(255, 245, 232, 1) 102%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#fff5e8', GradientType=0);
+  background: #ffffff;
   margin-bottom: constant(safe-area-inset-bottom);
   margin-bottom: env(safe-area-inset-bottom);
   padding-top: constant(safe-area-inset-top);
   padding-top: env(safe-area-inset-top);
 }
 
+.NotifyBellMenu {
+  position: absolute;
+  top: 15vh;
+  left: 5px;
+  right: 5px;
+  bottom: 20vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border-radius: 4px;
+  background: #ffffff;
+  padding: 5px;
+  height: max-content;
+  max-height: 50vh;
+  border: 1px solid #f0f0f0;
+  box-shadow: #cccccc 0px 2px 4px 0px;
+}
+.NotifyBellMenu a {
+  display: block;
+  border-bottom: 1px solid #ccc;
+  font-size: 0.6em;
+  font-weight: 400;
+  padding: 10px 0;
+  color: #666666;
+}
 .authors_table a {
   font-weight: 400;
   font-size: 0.8em;
 }
 
 .authors_table tr:active {
-  background: #007bff !important
+  background: #007bff !important;
 }
 
 .authors_table tr:active a {
   color: #ffffff !important;
 }
 
-.new {}
+.new {
+}
 
 .authors_table .btn {
   font-size: 0.7em;
@@ -143,7 +171,8 @@ body {
   overflow: hidden;
 }
 
-.btn-primary, .btn-danger {
+.btn-primary,
+.btn-danger {
   color: #ffffff !important;
 }
 
@@ -173,7 +202,9 @@ body {
   overflow: hidden;
 }
 
-form a, .login_form a, .check_ticket_by_number a {
+form a,
+.login_form a,
+.check_ticket_by_number a {
   font-weight: 400;
   color: #666666;
   display: block;
@@ -183,15 +214,16 @@ form a, .login_form a, .check_ticket_by_number a {
   text-decoration: underline;
 }
 
-.main_menu a.active {}
+.main_menu a.active {
+}
 
 .t_id {
-  margin: 45px 0
+  margin: 45px 0;
 }
 
 .main_menu a i {
   float: right;
-  font-size: 1.70em;
+  font-size: 1.7em;
   font-weight: 400;
   width: 32px;
   text-align: center;
@@ -199,7 +231,7 @@ form a, .login_form a, .check_ticket_by_number a {
 }
 
 .main_menu a i:active {
-  color: #FFBD54
+  color: #ffbd54;
 }
 
 .main_menu a span {
@@ -211,7 +243,7 @@ form a, .login_form a, .check_ticket_by_number a {
 
 /* RTL JQUERY MOBILE  */
 .ui-btn-icon-right:after {
-  left: .5625em !important;
+  left: 0.5625em !important;
   right: auto;
 }
 
@@ -220,7 +252,11 @@ form a, .login_form a, .check_ticket_by_number a {
   padding-right: 1.5em;
 }
 
-.ui-btn-icon-left:after, .ui-btn-icon-right:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after, .ui-btn-icon-notext:after {
+.ui-btn-icon-left:after,
+.ui-btn-icon-right:after,
+.ui-btn-icon-top:after,
+.ui-btn-icon-bottom:after,
+.ui-btn-icon-notext:after {
   width: 48px;
   height: 48px;
 }
@@ -256,7 +292,10 @@ form a, .login_form a, .check_ticket_by_number a {
   overflow: hidden;
 }
 
-.main_ticket, .posts .comment, .main_ticket p, .posts .comment p {
+.main_ticket,
+.posts .comment,
+.main_ticket p,
+.posts .comment p {
   font-size: 0.9em;
   font-family: Droid Arabic Kufi;
   line-height: 2;
@@ -284,12 +323,17 @@ form a, .login_form a, .check_ticket_by_number a {
   /*background-size: 24px 24px;*/
 }
 
-.ui-btn-icon-left:after, .ui-btn-icon-right:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after, .ui-btn-icon-notext:after {
+.ui-btn-icon-left:after,
+.ui-btn-icon-right:after,
+.ui-btn-icon-top:after,
+.ui-btn-icon-bottom:after,
+.ui-btn-icon-notext:after {
   -webkit-border-radius: 0em;
   border-radius: 0em;
 }
 
-.ui-page-theme-a .ui-btn:active, .ui-page-theme-a .ui-btn:hover {
+.ui-page-theme-a .ui-btn:active,
+.ui-page-theme-a .ui-btn:hover {
   background-color: inherit;
   border: none;
   box-shadow: none;
@@ -297,12 +341,16 @@ form a, .login_form a, .check_ticket_by_number a {
   text-shadow: none;
 }
 
-.ui-btn-icon-notext:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after {
+.ui-btn-icon-notext:after,
+.ui-btn-icon-top:after,
+.ui-btn-icon-bottom:after {
   left: 3% !important;
   margin-left: -3px !important;
 }
 
-.ui-btn-icon-notext:after, .ui-btn-icon-left:after, .ui-btn-icon-right:after {
+.ui-btn-icon-notext:after,
+.ui-btn-icon-left:after,
+.ui-btn-icon-right:after {
   top: 27% !important;
   margin-top: -11px !important;
 }
@@ -316,10 +364,15 @@ form a, .login_form a, .check_ticket_by_number a {
 /*table, th, td {
   border: 1px solid #cccccc !important;
 }*/
-body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {}
+body,
+#main_page,
+.ui-overlay-a,
+.ui-page-theme-a,
+.ui-page-theme-a .ui-panel-wrapper {
+}
 
 .u_comment {
-  border: 1px dashed #FF9800 !important;
+  border: 1px dashed #ff9800 !important;
   border-radius: 5px !important;
   margin-top: 15px;
   background: #fff5e6;
@@ -347,10 +400,11 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
   margin: 25px 0 !important;
 }
 
-.madad_body {}
+.madad_body {
+}
 
 .header {
-  background-color: #FFBD54 !important;
+  background-color: #ffbd54 !important;
   height: 15%;
   padding-top: 13%;
   margin-bottom: 50px;
@@ -377,7 +431,7 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
 }
 
 #menu .ui-panel-inner-top-HG {
-  background: #7b4f10 url('../images/logo.png') center center no-repeat;
+  background: #7b4f10 url("../images/logo.png") center center no-repeat;
   background-size: contain;
   text-shadow: none;
   position: absolute;
@@ -389,7 +443,7 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
 
 #menu .ui-panel-inner h3 {
   color: #ffffff;
-  margin-bottom: 2em
+  margin-bottom: 2em;
 }
 
 #menu .ui-listview {
@@ -401,7 +455,7 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
   color: #ffffff;
   line-height: 200%;
   font-family: "Droid Arabic Kufi", tahoma;
-  font-weight: 400
+  font-weight: 400;
 }
 
 #menu .ui-listview li a:active {
@@ -446,6 +500,11 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
   zoom: 1.3;
 }
 
+.NotifyBell:active .badge {
+  background: #ffffff;
+  color: red;
+}
+
 .NotifyBell span.badge {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -475,7 +534,7 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
 }
 
 .post_area:nth-child(odd) {
-  border-left: 1px solid #f0f0f0
+  border-left: 1px solid #f0f0f0;
 }
 
 .post_area .p_content {
@@ -516,7 +575,7 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
   display: block;
   overflow: hidden;
   width: 100%;
-  clear: both
+  clear: both;
 }
 
 .madad_body {
@@ -525,7 +584,7 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
 
 .no-padding {
   padding-left: 0;
-  padding-right: 0
+  padding-right: 0;
 }
 
 .toggle {
@@ -536,7 +595,7 @@ body, #main_page, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wr
 #sidebar {
   z-index: 9999999999999999999;
   overflow: hidden;
-  background: #FC0;
+  background: #fc0;
   /*background: -moz-linear-gradient(left, #f9f9f9 0%, #ededed 100%);
 background: -webkit-linear-gradient(left, #f9f9f9 0%,#ededed 100%);
 background: linear-gradient(to right, #f9f9f9 0%,#ededed 100%);
@@ -555,7 +614,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
   color: #111111;
   font-family: "Droid Arabic Kufi", tahoma;
   padding: 25px 5%;
-  border-bottom: #954A00 1px solid
+  border-bottom: #954a00 1px solid;
 }
 
 .home-icons {
@@ -569,7 +628,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 }
 
 .home-icons a:last-child {
-  border-left: none
+  border-left: none;
 }
 
 .home-icons a span {
@@ -598,23 +657,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', end
 }
 
 label {
-  font-weight: 400
+  font-weight: 400;
 }
 
 .home-icons a.active i {
-  color: #FC0;
+  color: #fc0;
 }
 
-.home-icons a.active i, .home-icons a.active p {
-  color: #75ad2b
+.home-icons a.active i,
+.home-icons a.active p {
+  color: #75ad2b;
 }
 
 .home-icons a:active {
-  background: #FC0;
+  background: #fc0;
 }
 
-.home-icons a:active i, .home-icons a:active p {
-  color: #000000
+.home-icons a:active i,
+.home-icons a:active p {
+  color: #000000;
 }
 
 .car-item {
@@ -628,11 +689,11 @@ border-bottom:1px dashed #999;*/
 }
 
 iframe {
-  background: #f0f0f0
+  background: #f0f0f0;
 }
 
 .about h4 {
-  font-size: large
+  font-size: large;
 }
 
 .about p {
@@ -641,7 +702,7 @@ iframe {
 }
 
 .car-item ul {
-  list-style: none
+  list-style: none;
 }
 
 .car-item li {
@@ -651,7 +712,7 @@ iframe {
 }
 
 .car-item h3 {
-  font-size: large
+  font-size: large;
 }
 
 .btn {
@@ -681,7 +742,7 @@ form label {
 }
 
 iframe {
-  background: #CCC url(../images/ellipsis.gif) center center no-repeat;
+  background: #ccc url(../images/ellipsis.gif) center center no-repeat;
 }
 
 .contact h2 {
@@ -708,16 +769,16 @@ iframe {
 }
 
 .map_me:active {
-  background: #FC0;
-  text-decoration: none
+  background: #fc0;
+  text-decoration: none;
 }
 
 .map_me i {
   margin-left: 6px;
 }
 
-@media screen and (min-width:750px) {
+@media screen and (min-width: 750px) {
   .main {
-    zoom: 2
+    zoom: 2;
   }
 }
