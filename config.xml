@@ -82,8 +82,8 @@
   <platform name="android">
     <allow-intent href="market:*"/>
   </platform>
-  <plugin spec="https://github.com/HGapps/cordova-plugin-fcm"/>
-  <plugin spec="https://github.com/HGapps/cordova-plugin-fcm-config"/>
-  <plugin name="cordova-plugin-fcm" spec="https://github.com/HGapps/cordova-plugin-fcm"/>
-  <plugin name="cordova-plugin-fcm-config" spec="https://github.com/HGapps/cordova-plugin-fcm-config"/>
+  <plugin spec="https://github.com/hasangad/cordova-plugin-fcm"/>
+  <plugin spec="https://github.com/hasangad/cordova-plugin-fcm-config"/>
+  <plugin name="cordova-plugin-fcm" spec="https://github.com/hasangad/cordova-plugin-fcm"/>
+  <plugin name="cordova-plugin-fcm-config" spec="https://github.com/hasangad/cordova-plugin-fcm-config"/>
 </widget>
